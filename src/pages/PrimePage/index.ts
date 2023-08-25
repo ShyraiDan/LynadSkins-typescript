@@ -1,0 +1,1 @@
+export { PrimePage } from './PrimePage'

@@ -1,0 +1,1 @@
+export { Fav } from './Fav'

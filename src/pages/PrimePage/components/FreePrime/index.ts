@@ -1,0 +1,1 @@
+export { FreePrime } from './FreePrime'

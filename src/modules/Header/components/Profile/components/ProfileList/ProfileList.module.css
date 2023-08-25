@@ -1,0 +1,32 @@
+.list {
+	position: absolute;
+	right: 0;
+	padding: 10px;
+	top: 45px;
+	background-color: var(--modals);
+	border-radius: 5px;
+	width: 130px;
+	z-index: 1;
+	color: white;
+}
+.btn {
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: capitalize;
+	padding: 0;
+	transition: ease 0.3s;
+	background: transparent;
+	color: var(--text-primary);
+}
+.link {
+	color: var(--text-primary);
+	transition: ease 0.3s;
+}
+@media screen and (min-width: 1050px) {
+	.link:hover {
+		color: #e71fb8;
+	}
+	.btn:hover {
+		color: #e71fb8;
+	}
+}

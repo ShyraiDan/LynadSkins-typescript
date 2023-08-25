@@ -1,0 +1,22 @@
+.conitaner {
+  padding: 10px;
+}
+@media screen and (min-width: 400px) {
+  .conitaner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 5px;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .main-container {
+    margin-top: 10px;
+    background-color: rgba(121, 121, 121, 0.1);
+    height: calc(100vh - 70px);
+    border-radius: 5px;
+    overflow-y: scroll;
+  }
+  .main-container::-webkit-scrollbar {
+    width: 0;
+  }
+}

@@ -1,0 +1,7 @@
+.typeContainer {
+	display: flex;
+	border-bottom: 1px solid var(--line);
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	flex-direction: column;
+}

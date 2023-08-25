@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+  width: 100%;
+  min-width: 1050px;
+  color: var(--btn-outline);
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 10px;
+}
+.list {
+  width: 100%;
+}
+.subitem {
+  text-align: center;
+}
+.subitemParam {
+  text-align: left;
+}
+.subitemTop {
+  border: none;
+  font-size: 28px;
+}
+.small {
+  display: flex;
+  justify-self: center;
+  font-size: 14px;
+  width: 150px;
+  text-align: center;
+}
+.btn {
+  font-size: 14px;
+  margin-top: 15px;
+  width: 50%;
+}
+.btnDisabled {
+  font-size: 14px;
+  margin-top: 15px;
+  width: 50%;
+  opacity: 0.5;
+}
+.subItemLast {
+  text-align: center;
+  padding-top: 15px;
+}
+.subItemCurr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 15px;
+}

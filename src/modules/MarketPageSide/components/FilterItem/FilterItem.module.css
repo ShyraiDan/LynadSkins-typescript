@@ -1,0 +1,23 @@
+.filter-item {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+	color: #fff;
+	cursor: pointer;
+	user-select: none;
+}
+.icon {
+	position: absolute;
+	top: 0;
+	right: 0px;
+	font-size: 20px;
+	color: var(--text-primary);
+}
+.icon-minus,
+.icon-plus {
+	text-align: center;
+	display: block;
+	width: 20px;
+}

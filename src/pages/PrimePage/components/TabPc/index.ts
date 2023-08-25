@@ -1,0 +1,1 @@
+export { TabPc } from './TabPc'

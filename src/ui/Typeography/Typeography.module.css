@@ -1,0 +1,108 @@
+.h1 {
+	font-size: 40px;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.h2 {
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.h3 {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.h4 {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.15;
+}
+
+.h5 {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.h6 {
+	font-size: 14px;
+	font-weight: 600;
+}
+.span {
+	font-size: 14px;
+	font-weight: 600;
+}
+.subheading1 {
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.subheading2 {
+	font-size: 0.875rem;
+	font-weight: 600;
+}
+
+.body1 {
+	font-size: 1rem;
+	font-size: 0.875rem;
+}
+
+.error {
+	color: #eb5757;
+}
+
+.white {
+	color: var(--text-primary);
+}
+
+.white-strong {
+	color: #fff;
+}
+
+.black {
+	color: #000;
+}
+
+.lightGrey {
+	color: #bbb;
+}
+
+.grey {
+	color: var(--grey);
+}
+
+.purple {
+	color: var(--text-secondary);
+}
+
+.orange {
+	color: #e5864e;
+}
+
+.gold {
+	color: gold;
+}
+.text-hover {
+	transition: 0.25s;
+	cursor: pointer;
+}
+.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.icon svg {
+	fill: var(--text-primary);
+	transition: 0.25s;
+}
+@media screen and (min-width: 1050px) {
+	.text-hover:hover {
+		color: #e71fb8;
+	}
+	.icon:hover svg {
+		fill: #e71fb8;
+	}
+}

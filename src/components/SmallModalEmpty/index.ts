@@ -1,0 +1,1 @@
+export { SmallModalEmpty } from './SmallModalEmpty'

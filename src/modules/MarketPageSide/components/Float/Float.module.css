@@ -1,0 +1,48 @@
+.accordion {
+  display: flex;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.show-val {
+  width: 75px;
+  border-radius: 10px;
+  background: var(--inputs);
+  border: none;
+  padding: 5px;
+  color: var(--text-primary);
+  font-size: 14px;
+  padding-top: 6px;
+  line-height: 110%;
+}
+.show-container {
+  display: flex;
+  justify-content: space-between;
+}
+.float-input {
+  -webkit-appearance: none;
+  margin: 15px 0;
+  height: 3px;
+  width: 100%;
+  background: var(--inputs);
+  transition: 0.3s ease;
+}
+.float-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--inputs);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.float-input::-webkit-slider-thumb:hover {
+  background: #af139b;
+  transition: 0.3s ease;
+}
+.float-input:active {
+  background: #af139b;
+  transition: 0.3s ease;
+}

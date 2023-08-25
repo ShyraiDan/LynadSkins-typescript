@@ -1,0 +1,1 @@
+export { SmallModalInner } from './SmallModalInner'

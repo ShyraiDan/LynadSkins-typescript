@@ -1,0 +1,24 @@
+.money {
+	padding: 5px;
+	display: flex;
+}
+.left {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.btn {
+	margin-left: 5px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	padding: 5px;
+	font-size: 16px;
+	z-index: 1;
+}
+@media screen and (min-width: 1050px) {
+	.money {
+		margin-right: 10px;
+	}
+}

@@ -1,0 +1,1 @@
+export { MainPageTop } from './MainPageTop'

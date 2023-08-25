@@ -1,0 +1,29 @@
+.container {
+	padding: 10px;
+}
+.sideBar,
+.items,
+.profile {
+	display: none;
+}
+.tabs {
+	display: block;
+}
+
+@media screen and (min-width: 1050px) {
+	.pc {
+		display: grid;
+		grid-template-columns: 1fr auto 1fr;
+	}
+	.tabs {
+		display: none;
+	}
+	.sideBar {
+		margin: 0 10px;
+		display: block;
+	}
+	.items,
+	.profile {
+		display: block;
+	}
+}

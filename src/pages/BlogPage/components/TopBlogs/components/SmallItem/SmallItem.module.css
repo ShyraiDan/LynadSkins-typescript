@@ -1,0 +1,16 @@
+.column {
+	/* padding: 0 10px; */
+	display: grid;
+	grid-gap: 15px;
+	grid-template-columns: 54px 1fr;
+	margin-bottom: 25px;
+}
+.photo {
+	width: 100%;
+	max-width: 54px;
+	border-radius: 5px;
+}
+.hashtag {
+	margin-bottom: 5px;
+	text-transform: uppercase;
+}

@@ -1,0 +1,35 @@
+.recomendation-cont {
+  background-color: rgba(54, 54, 54, 0.15);
+  margin: 0 -10px 35px -10px;
+}
+.recomendation-image {
+  background: url(./../../../../i/banner_background.svg);
+  background-size: cover;
+  padding: 30px;
+}
+.recomendation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.free-btn {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .recomendation-image {
+    padding: 60px 0 70px 40px;
+  }
+  .recomendation {
+    display: flex;
+    flex-direction: column;
+    max-width: 410px;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .recomendation-image {
+    padding: 40px 0 40px 90px;
+  }
+}

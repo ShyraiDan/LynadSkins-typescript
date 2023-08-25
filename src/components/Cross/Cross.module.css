@@ -1,0 +1,32 @@
+.burger-btn {
+  display: block;
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+.burger-span-top,
+.burger-span-bottom {
+  content: "";
+  background-color: var(--btn-outline);
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  transition: all 0.3s ease 0s;
+}
+.burger-span-top {
+  top: 0;
+  transform: rotate(45deg);
+  top: 9px;
+}
+.burger-span-bottom {
+  bottom: 0;
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+@media screen and (min-width: 1050px) {
+  .burger-btn:hover > .burger-span-top,
+  .burger-btn:hover > .burger-span-bottom {
+    background-color: red;
+  }
+}

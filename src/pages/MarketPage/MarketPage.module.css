@@ -1,0 +1,16 @@
+.container {
+  padding: 10px;
+}
+.sideBar {
+  display: none;
+}
+@media screen and (min-width: 1050px) {
+  .container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+  .sideBar {
+    display: block;
+    margin-right: 10px;
+  }
+}

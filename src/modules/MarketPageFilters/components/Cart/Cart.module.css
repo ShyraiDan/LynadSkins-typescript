@@ -1,0 +1,14 @@
+.btn {
+	margin: 0 5px;
+}
+.btns {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-top: 15px;
+}
+.warning {
+	display: flex;
+	justify-content: center;
+	color: red;
+	margin: 5px;
+}

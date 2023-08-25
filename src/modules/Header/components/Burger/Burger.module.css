@@ -1,0 +1,135 @@
+.burger-btn {
+  display: block;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  z-index: 3;
+}
+.burger-span {
+  position: absolute;
+  background-color: var(--text-primary);
+  left: 0;
+  height: 2px;
+  width: 100%;
+  top: 9px;
+  transition: all 0.3s ease 0s;
+}
+.burger-span-top,
+.burger-span-bottom {
+  content: "";
+  background-color: var(--text-primary);
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  transition: all 0.3s ease 0s;
+}
+.burger-span-top {
+  top: 0;
+}
+.burger-span-bottom {
+  bottom: 0;
+}
+
+.active .burger-span {
+  transform: scale(0);
+}
+.active .burger-span-top {
+  transform: rotate(45deg);
+  top: 9px;
+}
+.active .burger-span-bottom {
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+/* burger */
+.burger {
+  position: fixed;
+  top: 0;
+  left: -110%;
+  height: 100%;
+  width: 290px;
+  overflow: auto;
+  background-color: var(--burger);
+  padding: 0 10px;
+  transition: all 0.3s ease 0s;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.burger-top {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.burger.active {
+  list-style: none;
+  padding: 10px 20px;
+  left: 0;
+}
+.btn {
+  margin-right: 10px;
+}
+.burger-main {
+  margin-top: 30px;
+}
+.burger-btns {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconDay {
+  margin-top: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.social {
+  display: flex;
+  justify-content: center;
+}
+.social-item {
+  margin-top: 10px;
+  background: #7668cb;
+  border-radius: 6px;
+  display: flex;
+  height: 33px;
+  line-height: 36px;
+  margin-right: 5px;
+  text-align: center;
+  width: 33px;
+  align-items: center;
+  justify-content: center;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+}
+.link {
+  display: flex;
+  font-size: 24px;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.item {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.img {
+  width: 25px;
+  height: 25px;
+}
+.btn {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 0;
+  background-color: transparent;
+  margin-bottom: 10px;
+  color: #eb5757;
+}

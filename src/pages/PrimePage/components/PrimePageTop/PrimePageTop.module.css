@@ -1,0 +1,34 @@
+.premium-top {
+  margin-top: 60px;
+  margin-bottom: 45px;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.link {
+  color: #fff;
+  padding: 15px;
+  font-weight: 600;
+  border: 2px solid #7668cb;
+  background: #7668cb;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.25s;
+  width: 200px;
+}
+@media screen and (min-width: 550px) {
+  .premium-top {
+    max-width: 700px;
+    margin: 60px auto 45px;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .link:hover {
+    background: #e71fb8;
+    border: 2px solid #e71fb8;
+  }
+}

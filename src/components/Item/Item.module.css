@@ -1,0 +1,68 @@
+.item {
+	background-color: rgba(121, 121, 121, 0.1);
+	border: 1px solid rgba(121, 121, 121, 0.1);
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	flex-direction: column;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.photo {
+	width: 100%;
+	max-width: 180px;
+	transition: 0.3s ease;
+	max-height: 130px;
+}
+.description {
+	padding: 10px;
+	position: absolute;
+	bottom: 35px;
+	left: 0;
+	font-size: 14px;
+	color: #c0c0c0;
+}
+.description_bottom {
+	bottom: 0px;
+}
+.btn {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	text-transform: none;
+	font-size: 12px;
+}
+.btn-cart {
+	background-color: #00a046;
+}
+
+@media screen and (min-width: 400px) {
+	.item {
+		height: 205px;
+		justify-content: space-between;
+	}
+}
+@media screen and (min-width: 1050px) {
+	.btn {
+		padding: 5px;
+		transition: 0.5s;
+	}
+	.description {
+		bottom: 30px;
+	}
+	.item:hover {
+		background-color: rgba(255, 0, 204, 0.1);
+	}
+	.btn:hover {
+		border-radius: 0;
+		box-shadow: inset 17.5em 0 0 0 #00a046;
+	}
+	.item:hover > .photo {
+		transform: scale(0.92) rotate(12deg);
+	}
+}

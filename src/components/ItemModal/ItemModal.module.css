@@ -1,0 +1,136 @@
+.container {
+	width: 100%;
+}
+.modal-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.modal-image {
+	width: 100%;
+	max-width: 500px;
+}
+.modal-naming {
+	color: #c0c0c0;
+	font-size: 14px;
+}
+.modal-gold {
+	color: gold;
+}
+.modal-st {
+	color: #e5864e;
+}
+.modal-skin {
+	font-size: 24px;
+	font-weight: 600;
+}
+.modal-info {
+	margin-top: 15px;
+	padding: 15px;
+	background: var(--modal-info);
+	border-radius: 5px;
+}
+.modal-line {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	position: relative;
+}
+.modal-blue {
+	width: 7%;
+	height: 6px;
+	background: #3d818f;
+	border-radius: 50px 0 0 50px;
+}
+.modal-green {
+	width: 8%;
+	height: 6px;
+	background: #84b235;
+}
+.modal-yellow {
+	width: 23%;
+	height: 6px;
+	background: #dfc04a;
+}
+.modal-orange {
+	width: 7%;
+	height: 6px;
+	background: #ef8641;
+}
+.modal-red {
+	width: 55%;
+	height: 6px;
+	background: #eb5757;
+	border-radius: 0 50px 50px 0;
+}
+.modal-poiner {
+	position: absolute;
+	top: -7px;
+	left: calc(0.25 * 100%);
+	border: 7px solid transparent;
+	border-top: 7px solid #fff;
+}
+.modal-params {
+	margin-top: 15px;
+}
+.modal-param-item {
+	margin-bottom: 5px;
+	display: flex;
+	font-size: 14px;
+	justify-content: space-between;
+	color: #fff;
+}
+.modal-price {
+	margin-top: 18px;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+}
+.modal-buttons {
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-between;
+}
+.modal-like {
+	margin-left: 15px;
+	width: 56px;
+	height: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.modal-cart {
+	padding: 15px;
+	font-size: 18px;
+	width: 100%;
+}
+.modal-cart_added {
+	background-color: #00a046;
+}
+@media screen and (min-width: 1050px) {
+	.container {
+		display: flex;
+		align-items: center;
+		margin-top: 15px;
+	}
+	.modal-image {
+		width: 100%;
+		max-width: 350px;
+	}
+	.modal-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		line-height: 1.4;
+		width: 700px;
+		height: 350px;
+		z-index: 5;
+	}
+	.modal-right {
+		margin-left: 25px;
+		width: 300px;
+	}
+}

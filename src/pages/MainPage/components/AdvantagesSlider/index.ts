@@ -1,0 +1,1 @@
+export { AdvantagesSlider } from './AdvantagesSlider'

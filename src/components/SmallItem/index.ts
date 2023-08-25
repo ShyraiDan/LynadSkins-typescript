@@ -1,0 +1,1 @@
+export { SmallItem } from './SmallItem'

@@ -1,0 +1,22 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+}
+.btn-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.links-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.item:last-child {
+  border-bottom: none;
+}
+.steamID {
+  color: var(--text-primary);
+}

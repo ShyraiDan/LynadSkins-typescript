@@ -1,0 +1,49 @@
+.item {
+	background-color: rgba(121, 121, 121, 0.1);
+	height: 160px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+.photo {
+	width: 80%;
+	height: 80%;
+	margin-bottom: 20px;
+	transition: 0.2s ease;
+}
+.description {
+	padding: 10px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-size: 14px;
+	color: #c0c0c0;
+}
+.bottom {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	opacity: 0;
+	transition: 0.2s;
+}
+@media screen and (min-width: 530px) {
+	.item {
+		height: 180px;
+	}
+}
+@media screen and (min-width: 1050px) {
+	.item {
+		transition: 0.2s;
+	}
+	.item:hover {
+		cursor: pointer;
+		background-color: rgba(231, 31, 184, 0.05);
+	}
+	.item:hover > .bottom {
+		opacity: 1;
+	}
+	.item:hover > .photo {
+		transform: scale(0.92) rotate(12deg);
+	}
+}

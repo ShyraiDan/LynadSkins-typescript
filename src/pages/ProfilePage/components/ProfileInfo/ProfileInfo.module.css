@@ -1,0 +1,13 @@
+.profile-info {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.item {
+  margin: 10px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid grey;
+}
+.item:last-child {
+  border-bottom: none;
+}

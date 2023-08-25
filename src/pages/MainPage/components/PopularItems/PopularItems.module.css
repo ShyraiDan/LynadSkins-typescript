@@ -1,0 +1,36 @@
+.container {
+  margin-top: 30px;
+  padding: 0 10px;
+}
+
+.items {
+  margin: 20px 0;
+  width: fit-content;
+  min-width: 170px;
+}
+.itemsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titles {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 530px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 0 70px;
+  }
+}

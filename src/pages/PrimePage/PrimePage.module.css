@@ -1,0 +1,46 @@
+.container {
+  min-width: 320px;
+  padding: 0 10px;
+}
+.advantages {
+  margin-bottom: 50px;
+}
+.tab {
+  padding: 20px;
+}
+.tabPc {
+  display: none;
+}
+@media screen and (min-width: 550px) {
+  .premium-top,
+  .advantages {
+    max-width: 700px;
+  }
+
+  .advantages {
+    margin: 0 auto 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .advantages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    max-width: 900px;
+    padding: 0 10px;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .advantages {
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1400px;
+  }
+
+  .tab {
+    display: none;
+  }
+  .tabPc {
+    display: block;
+    padding-top: 20px;
+  }
+}
