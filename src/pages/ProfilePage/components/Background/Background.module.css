@@ -1,14 +1,14 @@
 .bg {
-	color: white;
-	background-color: rgba(121, 121, 121, 0.1);
-	margin: 10px;
-	padding: 10px;
-	border-radius: 5px;
-	max-width: 567px;
+  color: white;
+  background-color: rgba(121, 121, 121, 0.1);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 567px;
 }
 @media screen and (min-width: 1050px) {
-	.bg {
-		max-width: unset;
-		margin: 0px;
-	}
+  .bg {
+    max-width: unset;
+    margin: 0px;
+  }
 }

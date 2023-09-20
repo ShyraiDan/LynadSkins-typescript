@@ -1,34 +1,34 @@
 .skeleton {
-	background-color: rgba(121, 121, 121, 0.1);
-	border: 1px solid rgba(121, 121, 121, 0.1);
-	border-radius: 5px;
-	width: 100%;
-	height: 205px;
-	padding: 10px;
+  background-color: rgba(121, 121, 121, 0.1);
+  border: 1px solid rgba(121, 121, 121, 0.1);
+  border-radius: 5px;
+  width: 100%;
+  height: 205px;
+  padding: 10px;
 }
 .image {
-	width: 100%;
-	height: 120px;
+  width: 100%;
+  height: 120px;
 }
 .bottom {
-	margin-top: 15px;
-	padding: 10px;
-	height: 40px;
-	width: 100px;
+  margin-top: 15px;
+  padding: 10px;
+  height: 40px;
+  width: 100px;
 }
 .pulse {
-	display: block;
-	background-color: rgba(0, 0, 0, 0.11);
-	animation: animation-c7515d 1.5s ease-in-out 0.5s infinite;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.11);
+  animation: animation-c7515d 1.5s ease-in-out 0.5s infinite;
 }
 @keyframes animation-c7515d {
-	0% {
-		opacity: 0;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

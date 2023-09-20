@@ -5,9 +5,9 @@ import { Container } from '../../ui/Container'
 import { ErrorMessage } from './components/ErrorMessage'
 
 export const Nopage: FC = () => {
-	return (
-		<Container styles={styles.container}>
-			<ErrorMessage></ErrorMessage>
-		</Container>
-	)
+  return (
+    <Container styles={styles.container}>
+      <ErrorMessage></ErrorMessage>
+    </Container>
+  )
 }

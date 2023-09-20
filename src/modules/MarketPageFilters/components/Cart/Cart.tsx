@@ -20,115 +20,105 @@ import { Button } from '../../../../ui/Button'
 import { Container } from '../../../../ui/Container'
 
 interface ICart {
-	setStateModal: Function
+  setStateModal: Function
 }
 
 export const Cart: FC<ICart> = ({ setStateModal }) => {
-	const dispatch = useAppDispatch()
-	const { t } = useTranslation()
-	const [warning, setWarning] = useState('')
-	const data = useAppSelector((state) => state.cart)
-	const skins = useAppSelector((state) => state.skins.items)
+  const dispatch = useAppDispatch()
+  const { t } = useTranslation()
+  const [warning, setWarning] = useState('')
+  const data = useAppSelector((state) => state.cart)
+  const skins = useAppSelector((state) => state.skins.items)
 
-	const handleBuy = async (values: any) => {
-		let sum: number = values.reduce((a: TSkin, b: TSkin) => a.price + b.price)
-		const token = window.localStorage.getItem('token')
-		if (token === null) {
-			dispatch(setSignInState(true))
-			setStateModal(false)
-			changeOverflow(false)
-			return
-		}
-		let user: TUser = {
-			createdAt: '',
-			email: '',
-			fullName: '',
-			money: 0,
-			updatedAt: '',
-			__v: 0,
-			_id: '',
-		}
-		await axios
-			.get('/auth/me', {
-				data: {
-					token,
-				},
-			})
-			.then((res) => {
-				user = res.data
-			})
-		if (user === null) {
-			return
-		}
+  const handleBuy = async (values: any) => {
+    let sum: number = values.reduce((a: TSkin, b: TSkin) => a.price + b.price)
+    const token = window.localStorage.getItem('token')
+    if (token === null) {
+      dispatch(setSignInState(true))
+      setStateModal(false)
+      changeOverflow(false)
+      return
+    }
+    let user: TUser = {
+      createdAt: '',
+      email: '',
+      fullName: '',
+      money: 0,
+      updatedAt: '',
+      __v: 0,
+      _id: ''
+    }
+    await axios
+      .get('/auth/me', {
+        data: {
+          token
+        }
+      })
+      .then((res) => {
+        user = res.data
+      })
+    if (user === null) {
+      return
+    }
 
-		if (user?.money < sum) {
-			setWarning('You need to donate some money')
-			return
-		} else {
-			setWarning('')
-		}
-		values.forEach((el: TSkin) => {
-			let sellerMoney = 0
-			axios.post('/userMoney', { _id: `${el.user}` }).then((res) => {
-				sellerMoney = res.data
-				sellerMoney += el.price
-				axios.patch('/userMoney', { _id: `${el.user}`, money: sellerMoney })
-			})
+    if (user?.money < sum) {
+      setWarning('You need to donate some money')
+      return
+    } else {
+      setWarning('')
+    }
+    values.forEach((el: TSkin) => {
+      let sellerMoney = 0
+      axios.post('/userMoney', { _id: `${el.user}` }).then((res) => {
+        sellerMoney = res.data
+        sellerMoney += el.price
+        axios.patch('/userMoney', { _id: `${el.user}`, money: sellerMoney })
+      })
 
-			let item = {
-				...el,
-				user: user?._id,
-				onTrade: false,
-				color: el.color.toString(),
-			}
-			dispatch(
-				updateUser({
-					...user,
-					money: Number((user?.money - item.price).toFixed(2)),
-				})
-			)
-			dispatch(
-				updStateUser({
-					...user,
-					money: Number((user?.money - item.price).toFixed(2)),
-				})
-			)
+      let item = {
+        ...el,
+        user: user?._id,
+        onTrade: false,
+        color: el.color.toString()
+      }
+      dispatch(
+        updateUser({
+          ...user,
+          money: Number((user?.money - item.price).toFixed(2))
+        })
+      )
+      dispatch(
+        updStateUser({
+          ...user,
+          money: Number((user?.money - item.price).toFixed(2))
+        })
+      )
 
-			dispatch(updateSkin(item))
-			dispatch(setSkins(skins.filter((item) => item._id !== el._id)))
-		})
+      dispatch(updateSkin(item))
+      dispatch(setSkins(skins.filter((item) => item._id !== el._id)))
+    })
 
-		handleResetCart()
-	}
+    handleResetCart()
+  }
 
-	const handleResetCart = () => {
-		dispatch(resetCart())
-	}
+  const handleResetCart = () => {
+    dispatch(resetCart())
+  }
 
-	return (
-		<Container styles={styles.container}>
-			{data?.length ? (
-				<>
-					<SmallModalInner data={data} type={'Cart'} />
-					{warning && <div className={styles.warning}>{warning}</div>}
-					<div className={styles.btns}>
-						<Button
-							hover={true}
-							text={t('buy')}
-							onClick={() => handleBuy(data)}
-							style={styles.btn}
-						/>
-						<Button
-							hover={true}
-							text={t('reset_cart')}
-							onClick={handleResetCart}
-							style={styles.btn}
-						/>
-					</div>
-				</>
-			) : (
-				<SmallModalEmpty message={t('cart_empty')} desc={t('add_cart_items')} />
-			)}
-		</Container>
-	)
+  return (
+    <Container styles={styles.container}>
+      {data?.length ? (
+        <>
+          <SmallModalInner data={data} type={'Cart'} />
+          {warning && <div className={styles.warning}>{warning}</div>}
+          <div className={styles.btns}>
+            <Button hover={true} text={t('buy')} onClick={() => handleBuy(data)} style={styles.btn} />
+            <Button hover={true} text={t('reset_cart')} onClick={handleResetCart} style={styles.btn} />
+          </div>
+        </>
+      ) : (
+        <SmallModalEmpty message={t('cart_empty')} desc={t('add_cart_items')} />
+      )}
+    </Container>
+  )
 }

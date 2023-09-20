@@ -1,22 +1,22 @@
 .container {
-	margin-top: 35px;
-	padding: 0 10px;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 10px;
+  margin-top: 35px;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
 }
 @media screen and (min-width: 530px) {
-	.container {
-		padding: 0 30px;
-	}
+  .container {
+    padding: 0 30px;
+  }
 }
 @media screen and (min-width: 1050px) {
-	.container {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-	}
+  .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 @media screen and (min-width: 1200px) {
-	.container {
-		padding: 0 70px;
-	}
+  .container {
+    padding: 0 70px;
+  }
 }

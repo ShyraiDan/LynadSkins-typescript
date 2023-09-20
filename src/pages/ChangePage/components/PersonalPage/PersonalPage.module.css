@@ -1,34 +1,34 @@
 .unauth {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	min-height: 350px;
-	padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 350px;
+  padding: 10px;
 }
 
 .btns {
-	display: flex;
+  display: flex;
 }
 .btn {
-	font-weight: 600;
-	z-index: 1;
-	margin: 5px;
+  font-weight: 600;
+  z-index: 1;
+  margin: 5px;
 }
 .img {
-	width: 20px;
-	height: 20px;
+  width: 20px;
+  height: 20px;
 }
 @media screen and (min-width: 1050px) {
-	.unauth {
-		background-color: rgba(121, 121, 121, 0.1);
-		border-radius: 5px;
-		height: calc(100vh + 43px);
-		overflow-y: auto;
-	}
+  .unauth {
+    background-color: rgba(121, 121, 121, 0.1);
+    border-radius: 5px;
+    height: calc(100vh + 43px);
+    overflow-y: auto;
+  }
 }
 @media screen and (min-width: 1200px) {
-	.unauth {
-		height: calc(100vh + 8px);
-	}
+  .unauth {
+    height: calc(100vh + 8px);
+  }
 }

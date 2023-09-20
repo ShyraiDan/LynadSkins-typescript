@@ -4,12 +4,12 @@ import { Advantage } from './components/Advantage'
 import { AdvantagesSlider } from './components/AdvantagesSlider'
 import { PopularItems } from './components/PopularItems'
 export const MainPage: FC = () => {
-	return (
-		<>
-			<MainPageTop />
-			<Advantage />
-			<AdvantagesSlider />
-			<PopularItems />
-		</>
-	)
+  return (
+    <>
+      <MainPageTop />
+      <Advantage />
+      <AdvantagesSlider />
+      <PopularItems />
+    </>
+  )
 }

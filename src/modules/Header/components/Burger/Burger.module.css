@@ -16,7 +16,7 @@
 }
 .burger-span-top,
 .burger-span-bottom {
-  content: "";
+  content: '';
   background-color: var(--text-primary);
   position: absolute;
   width: 100%;

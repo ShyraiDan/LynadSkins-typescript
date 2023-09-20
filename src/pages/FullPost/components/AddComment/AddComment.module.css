@@ -1,37 +1,37 @@
 .addComment {
-	display: grid;
-	grid-template-columns: 40px 1fr;
-	grid-gap: 10px;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-gap: 10px;
 }
 .user {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	background: #7668cb;
-	transition: ease 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #7668cb;
+  transition: ease 0.3s;
 }
 .textBox {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .textarea {
-	width: 100%;
-	resize: none;
-	color: black;
-	padding: 10px;
-	border-radius: 5px;
-	font-weight: 400;
-	margin-bottom: 10px;
-	background-color: rgba(121, 121, 121, 0.1);
-	border: 1px solid rgba(121, 121, 121, 0.1);
+  width: 100%;
+  resize: none;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  background-color: rgba(121, 121, 121, 0.1);
+  border: 1px solid rgba(121, 121, 121, 0.1);
 }
 
 .textarea:focus-visible {
-	outline: 2px solid var(--text-primary);
+  outline: 2px solid var(--text-primary);
 }
 .btn {
-	max-width: min-content;
+  max-width: min-content;
 }

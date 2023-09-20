@@ -7,10 +7,10 @@ import { FiRotateCcw } from 'react-icons/fi'
 import { FaShoppingCart, FaUser, FaCrown } from 'react-icons/fa'
 
 export const AdvantagesSlider = () => {
-	return (
-		<>
-			<div className={styles['app__main-container']}>
-				{/* <CarouselCompound infinite>
+  return (
+    <>
+      <div className={styles['app__main-container']}>
+        {/* <CarouselCompound infinite>
 					<CarouselCompound.Page>
 						<div className={styles.item}>
 							<div className={styles.line}>
@@ -51,7 +51,7 @@ export const AdvantagesSlider = () => {
 						</div>
 					</CarouselCompound.Page>
 				</CarouselCompound> */}
-			</div>
-		</>
-	)
+      </div>
+    </>
+  )
 }

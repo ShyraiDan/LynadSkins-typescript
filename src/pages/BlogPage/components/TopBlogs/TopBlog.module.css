@@ -1,19 +1,19 @@
 .container {
-	border-top: 1px solid var(--line);
-	border-bottom: 1px solid var(--line);
-	padding-top: 20px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding-top: 20px;
 }
 @media screen and (min-width: 768px) {
-	.container {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 10px;
-	}
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
 }
 @media screen and (min-width: 992px) {
-	.container {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-gap: 10px;
-	}
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
 }

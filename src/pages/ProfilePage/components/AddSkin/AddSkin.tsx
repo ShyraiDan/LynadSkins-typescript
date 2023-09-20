@@ -9,24 +9,18 @@ import { AddSkinModal } from './components/AddSkinModal'
 import { FiPlus } from 'react-icons/fi'
 
 export const AddSkin: FC = () => {
-	const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false)
 
-	const openModal = () => {
-		setOpen(!open)
-		changeOverflow(open)
-	}
+  const openModal = () => {
+    setOpen(!open)
+    changeOverflow(open)
+  }
 
-	return (
-		<>
-			<Button
-				hover={true}
-				style={styles.btn}
-				onClick={() => openModal()}
-				text={<FiPlus fontSize={'24px'} />}></Button>
+  return (
+    <>
+      <Button hover={true} style={styles.btn} onClick={() => openModal()} text={<FiPlus fontSize={'24px'} />}></Button>
 
-			{open && (
-				<Modal children={<AddSkinModal />} handleClick={() => openModal()} />
-			)}
-		</>
-	)
+      {open && <Modal children={<AddSkinModal />} handleClick={() => openModal()} />}
+    </>
+  )
 }

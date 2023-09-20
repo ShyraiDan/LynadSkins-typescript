@@ -1,91 +1,91 @@
 .container {
-	margin-top: 15px;
-	background-color: rgba(121, 121, 121, 0.1);
-	border: 1px solid rgba(121, 121, 121, 0.1);
-	border-radius: 5px;
+  margin-top: 15px;
+  background-color: rgba(121, 121, 121, 0.1);
+  border: 1px solid rgba(121, 121, 121, 0.1);
+  border-radius: 5px;
 }
 .postImage {
-	width: 100%;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .wrapper {
-	padding: 10px 20px 20px;
-	display: flex;
-	flex-direction: column;
+  padding: 10px 20px 20px;
+  display: flex;
+  flex-direction: column;
 }
 .userInfo {
-	display: flex;
+  display: flex;
 }
 .user {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	background: #7668cb;
-	transition: ease 0.3s;
-	margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #7668cb;
+  transition: ease 0.3s;
+  margin-right: 10px;
 }
 .userName {
-	font-weight: 500;
-	font-size: 14px;
+  font-weight: 500;
+  font-size: 14px;
 }
 .additional {
-	font-size: 12px;
-	opacity: 0.6;
+  font-size: 12px;
+  opacity: 0.6;
 }
 .userDetails {
-	display: flex;
-	flex-direction: column;
-	color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  color: var(--text-primary);
 }
 .postContainer {
-	padding-left: 40px;
+  padding-left: 40px;
 }
 .hashtag,
 .icon {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 .postContent {
-	margin: 30px 0 50px;
+  margin: 30px 0 50px;
 }
 .icon {
-	color: var(--text-primary);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-right: 15px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
 }
 .link {
-	color: var(--text-primary);
-	margin-right: 5px;
-	transition: ease 0.3s;
-	font-size: 12px;
+  color: var(--text-primary);
+  margin-right: 5px;
+  transition: ease 0.3s;
+  font-size: 12px;
 }
 .counter {
-	margin-left: 5px;
+  margin-left: 5px;
 }
 .info {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .edit,
 .remove {
-	transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 .edit {
-	margin-right: 5px;
+  margin-right: 5px;
 }
 @media screen and (min-width: 992px) {
-	.link:hover {
-		color: #e71fb8;
-	}
-	.edit:hover,
-	.remove:hover {
-		fill: #e71fb8;
-	}
+  .link:hover {
+    color: #e71fb8;
+  }
+  .edit:hover,
+  .remove:hover {
+    fill: #e71fb8;
+  }
 }

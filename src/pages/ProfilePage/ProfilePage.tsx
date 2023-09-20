@@ -17,64 +17,56 @@ import { ProfileInfo } from './components/ProfileInfo'
 import { Subscribe } from './components/Subscribe'
 
 export const ProfilePage: FC = () => {
-	const isAuth = useAppSelector(selectIsAuth)
-	const { t } = useTranslation()
-	const [data, setData] = useState(null)
-	useEffect(() => {
-		const token = window.localStorage.getItem('token')
-		axios
-			.get('/auth/me', {
-				data: {
-					token,
-				},
-			})
-			.then((res) => {
-				setData(res.data)
-			})
-	}, [])
+  const isAuth = useAppSelector(selectIsAuth)
+  const { t } = useTranslation()
+  const [data, setData] = useState(null)
+  useEffect(() => {
+    const token = window.localStorage.getItem('token')
+    axios
+      .get('/auth/me', {
+        data: {
+          token
+        }
+      })
+      .then((res) => {
+        setData(res.data)
+      })
+  }, [])
 
-	if (!window.localStorage.getItem('token') && !isAuth) {
-		return <Navigate to='/' />
-	}
+  if (!window.localStorage.getItem('token') && !isAuth) {
+    return <Navigate to='/' />
+  }
 
-	return (
-		<Container styles={styles.container}>
-			<Typeography
-				variant={'h1'}
-				fontSize={'32px'}
-				color={'white'}
-				m={'0 0 20px 10px'}>
-				{t('personalPage.personal_info')}
-			</Typeography>
-			<div className={styles.top}>
-				<Background>
-					<ProfileInfo data={data}></ProfileInfo>
-				</Background>
-				<Background>
-					<Subscribe></Subscribe>
-				</Background>
-			</div>
-			<div className={styles.top}>
-				<Background>
-					<GeneralInfo></GeneralInfo>
-				</Background>
+  return (
+    <Container styles={styles.container}>
+      <Typeography variant={'h1'} fontSize={'32px'} color={'white'} m={'0 0 20px 10px'}>
+        {t('personalPage.personal_info')}
+      </Typeography>
+      <div className={styles.top}>
+        <Background>
+          <ProfileInfo data={data}></ProfileInfo>
+        </Background>
+        <Background>
+          <Subscribe></Subscribe>
+        </Background>
+      </div>
+      <div className={styles.top}>
+        <Background>
+          <GeneralInfo></GeneralInfo>
+        </Background>
 
-				<Background>
-					<ContactInfo></ContactInfo>
-				</Background>
-			</div>
-			<div className={styles.skins}>
-				<Typeography
-					variant={'h2'}
-					fontSize={'32px'}
-					color={'white'}
-					m={'0 0 20px 10px'}>
-					{t('personalPage.your_inventory')}
-				</Typeography>
-				<AddSkin />
-			</div>
+        <Background>
+          <ContactInfo></ContactInfo>
+        </Background>
+      </div>
+      <div className={styles.skins}>
+        <Typeography variant={'h2'} fontSize={'32px'} color={'white'} m={'0 0 20px 10px'}>
+          {t('personalPage.your_inventory')}
+        </Typeography>
+        <AddSkin />
+      </div>
 
-			<UserSkins />
-		</Container>
-	)
+      <UserSkins />
+    </Container>
+  )
 }

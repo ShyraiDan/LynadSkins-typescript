@@ -5,9 +5,9 @@ import { Container } from '../../ui/Container'
 import { OtherBlog } from './components/OtherBlogs'
 
 export const BlogPage: FC = () => {
-	return (
-		<Container styles={styles.container}>
-			<OtherBlog />
-		</Container>
-	)
+  return (
+    <Container styles={styles.container}>
+      <OtherBlog />
+    </Container>
+  )
 }

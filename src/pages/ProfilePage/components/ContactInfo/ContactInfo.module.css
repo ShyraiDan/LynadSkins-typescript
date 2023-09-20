@@ -1,27 +1,27 @@
 .item {
-	margin: 10px 0;
+  margin: 10px 0;
 }
 .item-top {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .icons {
-	display: flex;
+  display: flex;
 }
 .icon {
-	margin-left: 10px;
+  margin-left: 10px;
 }
 .post {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 @media screen and (min-width: 1050px) {
-	.icon-hover {
-		transition: 0.2s ease;
-	}
-	.icon-hover:hover {
-		fill: #e71fb8;
-	}
+  .icon-hover {
+    transition: 0.2s ease;
+  }
+  .icon-hover:hover {
+    fill: #e71fb8;
+  }
 }

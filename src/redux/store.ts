@@ -11,18 +11,18 @@ import { wishListReducer } from './slices/wishlist'
 import { filtersReducer } from './slices/filters'
 
 const store = configureStore({
-	reducer: {
-		posts: postReducer,
-		auth: authReducer,
-		currency: currencyReducer,
-		skins: skinsReducer,
-		cart: cartReducer,
-		wishList: wishListReducer,
-		marketItems: marketItemsReducer,
-		signInModal: signInModaReducer,
-		filters: filtersReducer,
-		change: changeReducer,
-	},
+  reducer: {
+    posts: postReducer,
+    auth: authReducer,
+    currency: currencyReducer,
+    skins: skinsReducer,
+    cart: cartReducer,
+    wishList: wishListReducer,
+    marketItems: marketItemsReducer,
+    signInModal: signInModaReducer,
+    filters: filtersReducer,
+    change: changeReducer
+  }
 })
 
 export default store

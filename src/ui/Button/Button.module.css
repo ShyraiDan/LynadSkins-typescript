@@ -1,20 +1,20 @@
 .btn {
-	color: #fff;
-	background: #7668cb;
-	border-radius: 5px;
-	font-size: 14px;
-	font-weight: 600;
-	padding: 10px;
-	text-align: center;
-	text-transform: uppercase;
-	transition: 0.25s;
-	cursor: pointer;
+  color: #fff;
+  background: #7668cb;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.25s;
+  cursor: pointer;
 }
 .btn:disabled {
-	cursor: auto;
+  cursor: auto;
 }
 @media screen and (min-width: 1050px) {
-	.btn-hover:hover {
-		background-color: #e71fb8;
-	}
+  .btn-hover:hover {
+    background-color: #e71fb8;
+  }
 }

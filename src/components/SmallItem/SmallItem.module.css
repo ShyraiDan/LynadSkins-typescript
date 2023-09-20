@@ -1,58 +1,58 @@
 .item {
-	background-color: rgba(121, 121, 121, 0.1);
-	width: 100%;
-	display: flex;
-	padding: 10px;
-	border-radius: 5px;
-	cursor: pointer;
-	justify-content: space-between;
+  background-color: rgba(121, 121, 121, 0.1);
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: space-between;
 }
 .photo {
-	width: 100%;
-	min-width: 70px;
-	max-width: 140px;
+  width: 100%;
+  min-width: 70px;
+  max-width: 140px;
 }
 .description {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	padding: 10px;
-	min-width: 140px;
-	max-width: 180px;
-	font-size: 14px;
-	color: #c0c0c0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  min-width: 140px;
+  max-width: 180px;
+  font-size: 14px;
+  color: #c0c0c0;
 }
 .bucket {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .left {
-	display: flex;
+  display: flex;
 }
 .icon-bucket {
-	transition: 0.2s;
+  transition: 0.2s;
 }
 @media screen and (min-width: 1050px) {
-	.item:hover {
-		background-color: rgba(255, 0, 204, 0.1);
-	}
-	.bucket {
-		width: 14.16px;
-	}
-	.bucket-icon {
-		opacity: 0;
-		transition: 0.2s;
-	}
-	.item:hover .bucket-icon {
-		opacity: 1;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	.icon-bucket:hover {
-		fill: red;
-		transition: 0.2s;
-	}
+  .item:hover {
+    background-color: rgba(255, 0, 204, 0.1);
+  }
+  .bucket {
+    width: 14.16px;
+  }
+  .bucket-icon {
+    opacity: 0;
+    transition: 0.2s;
+  }
+  .item:hover .bucket-icon {
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-bucket:hover {
+    fill: red;
+    transition: 0.2s;
+  }
 }

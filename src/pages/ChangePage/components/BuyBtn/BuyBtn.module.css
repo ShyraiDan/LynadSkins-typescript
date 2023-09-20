@@ -1,47 +1,47 @@
 .btn {
-	width: 100%;
-	background-color: rgba(121, 121, 121, 0.1);
-	display: flex;
-	justify-content: space-between;
-	padding: 10px;
-	align-items: center;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: 0.25s;
+  width: 100%;
+  background-color: rgba(121, 121, 121, 0.1);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.25s;
 }
 .trade-place {
-	text-align: right;
+  text-align: right;
 }
 .modal {
-	background-color: rgba(121, 121, 121, 0.1);
-	padding: 10px;
-	margin: 10px 0;
+  background-color: rgba(121, 121, 121, 0.1);
+  padding: 10px;
+  margin: 10px 0;
 }
 .skins {
-	display: grid;
-	grid-gap: 5px;
-	max-height: 120px;
-	overflow-y: auto;
+  display: grid;
+  grid-gap: 5px;
+  max-height: 120px;
+  overflow-y: auto;
 }
 .btn-confirm {
-	margin-top: 10px;
-	margin-right: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 .change {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 @media screen and (min-width: 1050px) {
-	.btn {
-		margin-bottom: 10px;
-	}
-	.list {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 10px;
-	}
-	.btn:hover {
-		background-color: #e71fb8;
-	}
+  .btn {
+    margin-bottom: 10px;
+  }
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .btn:hover {
+    background-color: #e71fb8;
+  }
 }

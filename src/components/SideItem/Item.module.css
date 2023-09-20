@@ -1,13 +1,13 @@
 .item {
-	display: flex;
-	align-items: center;
-	margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
 }
 .input {
-	margin-right: 10px;
-	cursor: pointer;
+  margin-right: 10px;
+  cursor: pointer;
 }
 .label {
-	cursor: pointer;
-	user-select: none;
+  cursor: pointer;
+  user-select: none;
 }

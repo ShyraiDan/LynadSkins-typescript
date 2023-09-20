@@ -5,13 +5,13 @@ import store from './redux/store'
 
 import { MainLayout } from './routes'
 const App: FC = () => {
-	return (
-		<>
-			<Provider store={store}>
-				<MainLayout />
-			</Provider>
-		</>
-	)
+  return (
+    <>
+      <Provider store={store}>
+        <MainLayout />
+      </Provider>
+    </>
+  )
 }
 
 export default App

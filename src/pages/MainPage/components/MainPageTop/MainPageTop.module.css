@@ -1,132 +1,132 @@
 .container {
-	padding: 0 10px;
+  padding: 0 10px;
 }
 .top {
-	min-height: 300px;
-	display: flex;
-	align-items: end;
-	margin-bottom: 20px;
+  min-height: 300px;
+  display: flex;
+  align-items: end;
+  margin-bottom: 20px;
 }
 .photo {
-	position: absolute;
-	width: 350px;
-	height: 350px;
-	top: -35px;
-	left: calc(100% - 350px);
-	filter: drop-shadow(-10px 0px 4px #e71fb8);
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  top: -35px;
+  left: calc(100% - 350px);
+  filter: drop-shadow(-10px 0px 4px #e71fb8);
 }
 .title {
-	max-width: 260px;
+  max-width: 260px;
 }
 .subtitle {
-	font-size: 16px;
-	font-weight: 500;
-	padding-right: 75px;
-	margin-bottom: 25px;
-	color: #999;
+  font-size: 16px;
+  font-weight: 500;
+  padding-right: 75px;
+  margin-bottom: 25px;
+  color: #999;
 }
 .btn {
-	margin-top: 10px;
-	width: 100%;
-	padding: 15px 12px;
-	font-size: 16px;
-	z-index: 1;
-	position: relative;
+  margin-top: 10px;
+  width: 100%;
+  padding: 15px 12px;
+  font-size: 16px;
+  z-index: 1;
+  position: relative;
 }
 .photo_second,
 .photo_third,
 .photo_fourth {
-	display: none;
+  display: none;
 }
 
 @media screen and (min-width: 530px) {
-	.photo {
-		transform: scale(1.25);
-		left: calc(100% - 395px);
-	}
+  .photo {
+    transform: scale(1.25);
+    left: calc(100% - 395px);
+  }
 
-	.container {
-		padding: 0 30px;
-	}
-	.top {
-		min-height: 255px;
-		display: flex;
-		align-items: end;
-		margin-bottom: 20px;
-	}
+  .container {
+    padding: 0 30px;
+  }
+  .top {
+    min-height: 255px;
+    display: flex;
+    align-items: end;
+    margin-bottom: 20px;
+  }
 }
 @media screen and (min-width: 670px) {
-	.title {
-		max-width: 500px;
-	}
+  .title {
+    max-width: 500px;
+  }
 }
 @media screen and (min-width: 1050px) {
-	.btn {
-		width: 110px;
-	}
-	.photo_second {
-		display: block;
-		position: absolute;
-		width: 400px;
-		height: 400px;
-		top: 60px;
-		left: calc(100% - 455px);
-		rotate: 0deg;
-		transform: scale(1.1);
-		filter: drop-shadow(-10px 0px 4px #f2d77c);
-	}
-	.top {
-		margin-bottom: 5px;
-	}
-	.title {
-		margin-top: 50px;
-		margin-bottom: 15px;
-		font-size: 40px;
-		font-weight: 500;
-	}
+  .btn {
+    width: 110px;
+  }
+  .photo_second {
+    display: block;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 60px;
+    left: calc(100% - 455px);
+    rotate: 0deg;
+    transform: scale(1.1);
+    filter: drop-shadow(-10px 0px 4px #f2d77c);
+  }
+  .top {
+    margin-bottom: 5px;
+  }
+  .title {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    font-size: 40px;
+    font-weight: 500;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-	.container {
-		padding: 0 70px;
-	}
-	.photo {
-		rotate: 90deg;
-		transform: scale(1.25);
-		top: 95px;
-		left: calc(100% - 395px);
-	}
-	.photo_second {
-		left: calc(100% - 665px);
-		rotate: -90deg;
-	}
-	.subtitle {
-		margin-bottom: 15px;
-		font-size: 18px;
-		width: 450px;
-	}
+  .container {
+    padding: 0 70px;
+  }
+  .photo {
+    rotate: 90deg;
+    transform: scale(1.25);
+    top: 95px;
+    left: calc(100% - 395px);
+  }
+  .photo_second {
+    left: calc(100% - 665px);
+    rotate: -90deg;
+  }
+  .subtitle {
+    margin-bottom: 15px;
+    font-size: 18px;
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1500px) {
-	.photo_third {
-		display: block;
-		position: absolute;
-		width: 400px;
-		height: 300px;
-		top: 80px;
-		left: calc(100% - 970px);
-		rotate: 90deg;
-		filter: drop-shadow(10px 0px 4px #21e692);
-	}
+  .photo_third {
+    display: block;
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 80px;
+    left: calc(100% - 970px);
+    rotate: 90deg;
+    filter: drop-shadow(10px 0px 4px #21e692);
+  }
 }
 @media screen and (min-width: 1780px) {
-	.photo_fourth {
-		display: block;
-		position: absolute;
-		width: 280px;
-		height: 210px;
-		top: 120px;
-		left: calc(100% - 1275px);
-		rotate: -75deg;
-		filter: drop-shadow(-10px 0px 4px #4d0613);
-	}
+  .photo_fourth {
+    display: block;
+    position: absolute;
+    width: 280px;
+    height: 210px;
+    top: 120px;
+    left: calc(100% - 1275px);
+    rotate: -75deg;
+    filter: drop-shadow(-10px 0px 4px #4d0613);
+  }
 }

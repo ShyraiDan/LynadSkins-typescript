@@ -2,131 +2,115 @@
 .line-two,
 .line-three,
 .line-fourth {
-	display: none;
+  display: none;
 }
 
 @media screen and (min-width: 1200px) {
-	.line-one {
-		display: block;
-		position: absolute;
-		width: 100px;
-		height: 1px;
+  .line-one {
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 1px;
 
-		top: 340px;
-		left: calc(100% - 370px);
-		rotate: 45deg;
-		transform: scale(1.1);
-		background: linear-gradient(
-			90deg,
-			rgba(231, 31, 184, 1) 0%,
-			rgba(224, 77, 190, 0.1) 100%
-		);
-	}
-	.bullet {
-		position: relative;
-		width: 10px;
-		height: 10px;
-		top: -5px;
-		left: 0;
-		border-radius: 50%;
-		background-color: #e71fb8;
-	}
-	.line-two {
-		display: block;
-		position: absolute;
-		width: 100px;
-		height: 1px;
-		top: 200px;
-		left: calc(100% - 580px);
-		rotate: 45deg;
-		transform: scale(1.1);
-		background: linear-gradient(
-			90deg,
-			rgba(231, 31, 184, 1) 0%,
-			rgba(224, 77, 190, 0.1) 100%
-		);
-	}
-	.knifes-text {
-		width: 270px;
-		display: block;
-		position: relative;
-		rotate: -45deg;
-		top: -90px;
-		left: -80px;
-		color: #e71fb8;
-		font-weight: 600;
-		text-shadow: 5px 5px 7px var(--shadow);
-	}
+    top: 340px;
+    left: calc(100% - 370px);
+    rotate: 45deg;
+    transform: scale(1.1);
+    background: linear-gradient(90deg, rgba(231, 31, 184, 1) 0%, rgba(224, 77, 190, 0.1) 100%);
+  }
+  .bullet {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    top: -5px;
+    left: 0;
+    border-radius: 50%;
+    background-color: #e71fb8;
+  }
+  .line-two {
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    top: 200px;
+    left: calc(100% - 580px);
+    rotate: 45deg;
+    transform: scale(1.1);
+    background: linear-gradient(90deg, rgba(231, 31, 184, 1) 0%, rgba(224, 77, 190, 0.1) 100%);
+  }
+  .knifes-text {
+    width: 270px;
+    display: block;
+    position: relative;
+    rotate: -45deg;
+    top: -90px;
+    left: -80px;
+    color: #e71fb8;
+    font-weight: 600;
+    text-shadow: 5px 5px 7px var(--shadow);
+  }
 }
 @media screen and (min-width: 1500px) {
-	.photo_third {
-		display: block;
-		position: absolute;
-		width: 400px;
-		top: 80px;
-		left: calc(100% - 930px);
-		rotate: 90deg;
-	}
-	.line-three {
-		display: block;
-		position: absolute;
-		width: 100px;
-		height: 1px;
-		top: 205px;
-		left: calc(100% - 865px);
-		rotate: 45deg;
-		transform: scale(1.1);
-		background: linear-gradient(
-			90deg,
-			rgba(231, 31, 184, 1) 0%,
-			rgba(224, 77, 190, 0.1) 100%
-		);
-	}
-	.knifes-text_mod {
-		width: 270px;
-		display: block;
-		position: relative;
-		rotate: -45deg;
-		top: -25px;
-		left: -150px;
-		color: #e71fb8;
-		font-weight: 600;
-		text-shadow: 5px 5px 7px var(--shadow);
-	}
+  .photo_third {
+    display: block;
+    position: absolute;
+    width: 400px;
+    top: 80px;
+    left: calc(100% - 930px);
+    rotate: 90deg;
+  }
+  .line-three {
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    top: 205px;
+    left: calc(100% - 865px);
+    rotate: 45deg;
+    transform: scale(1.1);
+    background: linear-gradient(90deg, rgba(231, 31, 184, 1) 0%, rgba(224, 77, 190, 0.1) 100%);
+  }
+  .knifes-text_mod {
+    width: 270px;
+    display: block;
+    position: relative;
+    rotate: -45deg;
+    top: -25px;
+    left: -150px;
+    color: #e71fb8;
+    font-weight: 600;
+    text-shadow: 5px 5px 7px var(--shadow);
+  }
 }
 @media screen and (min-width: 1780px) {
-	.photo_fourth {
-		display: block;
-		position: absolute;
-		width: 400px;
-		top: 80px;
-		left: calc(100% - 1350px);
-		rotate: -75deg;
-	}
-	.line-fourth {
-		display: block;
-		position: absolute;
-		width: 100px;
-		height: 1px;
-		top: 230px;
-		left: calc(100% - 1150px);
-		rotate: -135deg;
-		transform: scale(1.1);
-		background: linear-gradient(
-			90deg,
-			rgba(231, 31, 184, 1) 0%,
-			rgba(224, 77, 190, 0.1) 100%
-		);
-	}
-	.knifes-text_fourth {
-		width: 270px;
-		display: block;
-		position: relative;
-		rotate: 135deg;
-		top: 20px;
-		left: -200px;
-		color: #e71fb8;
-		font-weight: 600;
-		text-shadow: 5px 5px 7px var(--shadow);
-	}
+  .photo_fourth {
+    display: block;
+    position: absolute;
+    width: 400px;
+    top: 80px;
+    left: calc(100% - 1350px);
+    rotate: -75deg;
+  }
+  .line-fourth {
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    top: 230px;
+    left: calc(100% - 1150px);
+    rotate: -135deg;
+    transform: scale(1.1);
+    background: linear-gradient(90deg, rgba(231, 31, 184, 1) 0%, rgba(224, 77, 190, 0.1) 100%);
+  }
+  .knifes-text_fourth {
+    width: 270px;
+    display: block;
+    position: relative;
+    rotate: 135deg;
+    top: 20px;
+    left: -200px;
+    color: #e71fb8;
+    font-weight: 600;
+    text-shadow: 5px 5px 7px var(--shadow);
+  }
 }

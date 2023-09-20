@@ -10,30 +10,26 @@ import { Button } from '../../../../ui/Button'
 import { Container } from '../../../../ui/Container'
 
 export const Fav: FC = () => {
-	const { t } = useTranslation()
-	const data = useAppSelector((state) => state.wishList)
-	const dispatch = useAppDispatch()
+  const { t } = useTranslation()
+  const data = useAppSelector((state) => state.wishList)
+  const dispatch = useAppDispatch()
 
-	const clearWishList = () => {
-		dispatch(resetWishList())
-	}
+  const clearWishList = () => {
+    dispatch(resetWishList())
+  }
 
-	return (
-		<Container styles={styles.container}>
-			{data.length ? (
-				<>
-					<SmallModalInner data={data} type={'Favorites'} />
-					<div className={styles.btns}>
-						<Button
-							text={t('reset_fav')}
-							onClick={() => clearWishList()}
-							style={styles.btn}
-						/>
-					</div>
-				</>
-			) : (
-				<SmallModalEmpty message={t('fav_empty')} desc={t('add_fav_items')} />
-			)}
-		</Container>
-	)
+  return (
+    <Container styles={styles.container}>
+      {data.length ? (
+        <>
+          <SmallModalInner data={data} type={'Favorites'} />
+          <div className={styles.btns}>
+            <Button text={t('reset_fav')} onClick={() => clearWishList()} style={styles.btn} />
+          </div>
+        </>
+      ) : (
+        <SmallModalEmpty message={t('fav_empty')} desc={t('add_fav_items')} />
+      )}
+    </Container>
+  )
 }

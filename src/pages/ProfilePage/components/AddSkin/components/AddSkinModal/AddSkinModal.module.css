@@ -1,49 +1,49 @@
 .container {
-	width: 100%;
-	padding: 10px;
+  width: 100%;
+  padding: 10px;
 }
 .btns {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .label {
-	display: block;
-	color: var(--text-primary);
-	margin-bottom: 10px;
+  display: block;
+  color: var(--text-primary);
+  margin-bottom: 10px;
 }
 .label-checkbox {
-	margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 .selects {
-	margin: 10px 0;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 10px;
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
 }
 option {
-	background-color: var(--modals);
+  background-color: var(--modals);
 }
 .select {
-	align-self: center;
-	justify-self: center;
-	width: 100%;
-	padding: 7px;
-	font-size: 16px;
-	color: var(--text-primary);
-	background-color: rgba(121, 121, 121, 0.1);
-	border-radius: 5px;
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+  padding: 7px;
+  font-size: 16px;
+  color: var(--text-primary);
+  background-color: rgba(121, 121, 121, 0.1);
+  border-radius: 5px;
 }
 .checkboxes {
-	display: grid;
-	grid-template-columns: 70px 15px;
-	grid-gap: 5px;
-	margin: 10px 0;
+  display: grid;
+  grid-template-columns: 70px 15px;
+  grid-gap: 5px;
+  margin: 10px 0;
 }
 .btn-image {
-	margin: 15px 0;
+  margin: 15px 0;
 }
 .error {
-	color: red;
-	margin-bottom: 5px;
+  color: red;
+  margin-bottom: 5px;
 }

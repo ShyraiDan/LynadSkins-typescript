@@ -13,46 +13,46 @@ import { BuyBtn } from './components/BuyBtn'
 import { PersonalPage } from './components/PersonalPage'
 
 export const ChangePage: FC = () => {
-	const isAuth = useAppSelector(selectIsAuth)
+  const isAuth = useAppSelector(selectIsAuth)
 
-	return (
-		<>
-			<Container styles={styles.container}>
-				<BuyBtn />
-				<div className={styles.tabs}>
-					<Tab
-						amount={2}
-						firstTab={'Inventory'}
-						secondTab={'LynadSkins'}
-						firstContent={
-							<div>
-								<MarketPageFilters />
-								{!isAuth && <PersonalPage />}
-								{isAuth && <UserSkins />}
-							</div>
-						}
-						secondContent={
-							<div>
-								<MarketPageFilters />
-								<MarketPageItems />
-							</div>
-						}
-					/>
-				</div>
-				<div className={styles.pc}>
-					<div className={styles.profile}>
-						{!isAuth && <PersonalPage />}
-						{isAuth && <UserSkins />}
-					</div>
-					<div className={styles.sideBar}>
-						<MarketPageSide />
-					</div>
-					<div className={styles.items}>
-						<MarketPageFilters />
-						<MarketPageItems />
-					</div>
-				</div>
-			</Container>
-		</>
-	)
+  return (
+    <>
+      <Container styles={styles.container}>
+        <BuyBtn />
+        <div className={styles.tabs}>
+          <Tab
+            amount={2}
+            firstTab={'Inventory'}
+            secondTab={'LynadSkins'}
+            firstContent={
+              <div>
+                <MarketPageFilters />
+                {!isAuth && <PersonalPage />}
+                {isAuth && <UserSkins />}
+              </div>
+            }
+            secondContent={
+              <div>
+                <MarketPageFilters />
+                <MarketPageItems />
+              </div>
+            }
+          />
+        </div>
+        <div className={styles.pc}>
+          <div className={styles.profile}>
+            {!isAuth && <PersonalPage />}
+            {isAuth && <UserSkins />}
+          </div>
+          <div className={styles.sideBar}>
+            <MarketPageSide />
+          </div>
+          <div className={styles.items}>
+            <MarketPageFilters />
+            <MarketPageItems />
+          </div>
+        </div>
+      </Container>
+    </>
+  )
 }

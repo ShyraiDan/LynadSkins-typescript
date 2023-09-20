@@ -7,15 +7,15 @@ import { Header } from '../../modules/Header'
 import { Footer } from '../../modules/Footer'
 
 export const Layout: FC = () => {
-	const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light', 'dark')
-	const { i18n } = useTranslation()
-	return (
-		<>
-			<div className='App' data-theme={theme}>
-				<Header theme={theme} setTheme={setTheme} langFunc={i18n} />
-				<Outlet />
-				<Footer />
-			</div>
-		</>
-	)
+  const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light', 'dark')
+  const { i18n } = useTranslation()
+  return (
+    <>
+      <div className='App' data-theme={theme}>
+        <Header theme={theme} setTheme={setTheme} langFunc={i18n} />
+        <Outlet />
+        <Footer />
+      </div>
+    </>
+  )
 }

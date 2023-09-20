@@ -1,42 +1,42 @@
 .priceInput {
-	width: 100%;
-	border-radius: 5px;
-	background: var(--modals);
-	padding: 5px;
-	color: var(--text-primary);
-	font-size: 14px;
-	padding-top: 6px;
-	line-height: 110%;
-	border: 1px solid var(--text-secondary);
+  width: 100%;
+  border-radius: 5px;
+  background: var(--modals);
+  padding: 5px;
+  color: var(--text-primary);
+  font-size: 14px;
+  padding-top: 6px;
+  line-height: 110%;
+  border: 1px solid var(--text-secondary);
 }
 [type='submit'],
 [type='reset'] {
-	color: #fff;
-	background: #7668cb;
-	border-radius: 5px;
-	font-size: 14px;
-	border: none;
-	font-weight: 600;
-	padding: 10px;
-	text-align: center;
-	text-transform: uppercase;
-	transition: 0.25s;
-	cursor: pointer;
+  color: #fff;
+  background: #7668cb;
+  border-radius: 5px;
+  font-size: 14px;
+  border: none;
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.25s;
+  cursor: pointer;
 }
 .priceInput:disabled {
-	opacity: 0.5;
-	cursor: auto;
+  opacity: 0.5;
+  cursor: auto;
 }
 .priceInput:focus-visible {
-	outline: 2px solid var(--text-primary);
+  outline: 2px solid var(--text-primary);
 }
 @media screen and (min-width: 1050px) {
-	[type='submit']:hover,
-	[type='reset']:hover {
-		background-color: #e71fb8;
-	}
+  [type='submit']:hover,
+  [type='reset']:hover {
+    background-color: #e71fb8;
+  }
 
-	.priceInput:disabled:hover {
-		background-color: #7668cb;
-	}
+  .priceInput:disabled:hover {
+    background-color: #7668cb;
+  }
 }
