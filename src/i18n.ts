@@ -76,6 +76,12 @@ i18n
             market: 'Market',
             blog: 'Blog'
           },
+          no_page: {
+            page_not_found: 'Page not found',
+            error_reload: 'Error 404. An incorrectly typed address or such a page on the site no longer exists.',
+            move_trade: 'Move to Trade',
+            move_market: 'Move to Market'
+          },
           advantage_slider: {
             one: {
               title: 'Store',
@@ -330,6 +336,12 @@ i18n
             trade: 'Трейд',
             market: 'Маркет',
             blog: 'Блог'
+          },
+          no_page: {
+            page_not_found: 'Сторінку не знайдено',
+            error_reload: 'Помилка 404. Неправильно набрано адресу або такої сторінки на сайті більше не існує.',
+            move_trade: 'Перейти до Трейду',
+            move_market: 'Перейти до Маркету'
           },
           advantage_slider: {
             one: {
