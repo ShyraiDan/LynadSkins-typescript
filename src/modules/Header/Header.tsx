@@ -7,6 +7,7 @@ import { changeOverflow } from '../../helpers/helpers'
 import { selectIsAuth } from '../../redux/slices/auth'
 import { setSignInState } from '../../redux/slices/signInModal'
 import { i18n } from 'i18next'
+import { useTranslation } from 'react-i18next'
 import styles from './Header.module.css'
 
 import { Currency } from '../../components/Currency'
@@ -31,11 +32,13 @@ interface IHeader {
 
 export const Header: FC<IHeader> = ({ theme, setTheme, langFunc }) => {
   const dispatch = useAppDispatch()
+  const { t } = useTranslation()
   const singInOpen = useAppSelector((store) => store.signInModal)
   const [open, setOpen] = useState<boolean>(singInOpen.state || false)
   const [signUpOpen, setSignUpOpen] = useState<boolean>(false)
   const [data, setData] = useState(null)
   const isAuth = useAppSelector(selectIsAuth)
+
   const handleClick = () => {
     if (singInOpen.state) {
       dispatch(setSignInState(false))
@@ -86,18 +89,18 @@ export const Header: FC<IHeader> = ({ theme, setTheme, langFunc }) => {
           <ListItem style={styles.item}>
             {' '}
             <Link className={styles.link} to={'/trade'}>
-              Trade
+              {t('header.trade')}
             </Link>
           </ListItem>
           <ListItem style={styles.item}>
             {' '}
             <Link className={styles.link} to={'/market'}>
-              Market
+              {t('header.market')}
             </Link>
           </ListItem>
           <ListItem style={styles.item}>
             <Link className={styles.link} to={'/blog'}>
-              Blog
+              {t('header.blog')}
             </Link>
           </ListItem>
         </List>
@@ -122,8 +125,18 @@ export const Header: FC<IHeader> = ({ theme, setTheme, langFunc }) => {
         )}
         {!isAuth && (
           <>
-            <Button text={'Sign up'} style={styles.btn} hover={true} onClick={() => openSignUpModal()}></Button>
-            <Button text={'Sign in'} style={styles['btn-second']} hover={true} onClick={() => handleClick()}></Button>
+            <Button
+              text={t('header.sign_up')}
+              style={styles.btn}
+              hover={true}
+              onClick={() => openSignUpModal()}
+            ></Button>
+            <Button
+              text={t('header.sign_in')}
+              style={styles['btn-second']}
+              hover={true}
+              onClick={() => handleClick()}
+            ></Button>
           </>
         )}
         <AnimatePresence initial={false}>
