@@ -29,13 +29,14 @@ export const Search: FC = () => {
       </div>
       <div className={styles['skins-container']}>
         <div className={styles.skins} ref={skinsShow}>
-          {skins
-            .filter((item: TSkin) => {
-              return search.toLowerCase() === '' ? item : item.skinName.toLowerCase().includes(search.toLowerCase())
-            })
-            .map((item: TSkin) => {
-              return <SmallItem data={item} />
-            })}
+          {skins &&
+            skins
+              .filter((item: TSkin) => {
+                return search.toLowerCase() === '' ? item : item.skinName.toLowerCase().includes(search.toLowerCase())
+              })
+              .map((item: TSkin) => {
+                return <SmallItem data={item} />
+              })}
         </div>
       </div>
     </Container>

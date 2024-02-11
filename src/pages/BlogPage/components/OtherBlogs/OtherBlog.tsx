@@ -15,8 +15,6 @@ export const OtherBlog: FC = () => {
   const { t } = useTranslation()
   const posts = useAppSelector((state) => state.posts)
 
-  console.log(posts)
-
   let isPostsLoading = posts.status === 'loading'
 
   useEffect(() => {

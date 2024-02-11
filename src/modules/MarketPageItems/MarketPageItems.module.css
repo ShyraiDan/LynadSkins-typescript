@@ -1,6 +1,13 @@
 .conitaner {
   padding: 10px;
 }
+
+.no-skins {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (min-width: 400px) {
   .conitaner {
     display: grid;
