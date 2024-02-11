@@ -5,6 +5,7 @@ import { changeOverflow } from '../../helpers/helpers'
 import { fetchAuth, selectIsAuth } from '../../redux/slices/auth'
 import { setSignInState } from '../../redux/slices/signInModal'
 import { TfetchAuthparams } from '../../redux/types'
+import { useTranslation } from 'react-i18next'
 import styles from './SingInModal.module.css'
 
 import { Container } from '../../ui/Container'
@@ -21,6 +22,7 @@ interface ISignInModal {
 
 export const SignInModal: FC<ISignInModal> = ({ setState, setOtherState }) => {
   const isAuth = useAppSelector(selectIsAuth)
+  const { t } = useTranslation()
   const dispatch = useAppDispatch()
 
   const [viewPass, setViewPass] = useState('password')
@@ -63,16 +65,15 @@ export const SignInModal: FC<ISignInModal> = ({ setState, setOtherState }) => {
     <>
       <Container styles={styles.container}>
         <Typeography variant={'h3'} color={'white'} m={'0 0 15px 0 '}>
-          {' '}
-          Sign in to your account
+          {t('auth_modals.sign_in_to_account')}
         </Typeography>
         <form action='' onSubmit={handleSubmit(onSubmit)} className={styles.form}>
           <label htmlFor='Email' className={styles.label}>
-            Email:
+            {t('auth_modals.email')}:
             <Input
               id={'Email'}
               type={'email'}
-              placeholder={'Email'}
+              placeholder={t('auth_modals.email')}
               obj={register('email', {
                 required: true,
                 pattern: /^\S+@\S+$/i
@@ -82,12 +83,12 @@ export const SignInModal: FC<ISignInModal> = ({ setState, setOtherState }) => {
           </label>
 
           <label htmlFor='Password' className={styles.label}>
-            Password:
+            {t('auth_modals.password')}:
             <div className={styles.password}>
               <Input
                 id={'Password'}
                 type={viewPass}
-                placeholder={'Password'}
+                placeholder={t('auth_modals.password')}
                 obj={register('password', {
                   required: true,
                   minLength: 5,
@@ -102,13 +103,13 @@ export const SignInModal: FC<ISignInModal> = ({ setState, setOtherState }) => {
           </label>
 
           <div className={styles.controls}>
-            <Input type={'submit'} mt={'10px'} value={'Sing in'} disabled={!isValid} />
-
-            <Input type={'reset'} value={'Reset'} mt={'10px'} />
+            <Input type={'submit'} mt={'10px'} value={t('auth_modals.sign_in')} disabled={!isValid} />
+            <Input type={'reset'} value={t('auth_modals.reset')} mt={'10px'} />
           </div>
         </form>
         <Typeography color={'white'} fontWeight={600} fontSize={'14px'} m={'10px 0 0 0'}>
-          New to LynadSkins? <Button style={styles.btn} text={'Create an account.'} onClick={changeModal}></Button>{' '}
+          {t('auth_modals.new_user')}{' '}
+          <Button style={styles.btn} text={t('auth_modals.create_account')} onClick={changeModal}></Button>{' '}
         </Typeography>
       </Container>
     </>

@@ -5,6 +5,7 @@ import { changeOverflow } from '../../helpers/helpers'
 import { fetchRegister, selectIsAuth } from '../../redux/slices/auth'
 import { TfetchRegisterparams } from '../../redux/types'
 import { Button } from '../../ui/Button'
+import { useTranslation } from 'react-i18next'
 import styles from './SignUpModal.module.css'
 
 import { Container } from '../../ui/Container'
@@ -19,6 +20,7 @@ interface ISignUpModal {
 }
 
 export const SignUpModal: FC<ISignUpModal> = ({ setState, setOtherState }) => {
+  const { t } = useTranslation()
   const [viewPass, setViewPass] = useState('password')
   const dispatch = useAppDispatch()
   const isAuth = useAppSelector(selectIsAuth)
@@ -60,8 +62,7 @@ export const SignUpModal: FC<ISignUpModal> = ({ setState, setOtherState }) => {
     <>
       <Container styles={styles.container}>
         <Typeography variant={'h3'} color={'white'} m={'0 0 15px 0 '}>
-          {' '}
-          Sign up to your account
+          {t('auth_modals.sign_up_to_account')}
         </Typeography>
         <Typeography variant={'h4'} color={'orange'} m={'0 0 15px 0 '}>
           <FaExclamationTriangle fill='#e5864e' fontSize={'14px'} />
@@ -70,11 +71,11 @@ export const SignUpModal: FC<ISignUpModal> = ({ setState, setOtherState }) => {
         </Typeography>
         <form action='' onSubmit={handleSubmit(onSubmit)} className={styles.form}>
           <label htmlFor='fullName' className={styles.label}>
-            Full name:
+            {t('auth_modals.full_name')}:
             <Input
               id={'fullName'}
               type={'text'}
-              placeholder={'Full name'}
+              placeholder={t('auth_modals.full_name')}
               obj={register('fullName', {
                 required: 'Full name is required field',
                 minLength: 3
@@ -84,11 +85,11 @@ export const SignUpModal: FC<ISignUpModal> = ({ setState, setOtherState }) => {
           </label>
 
           <label htmlFor='Email' className={styles.label}>
-            Email:
+            {t('auth_modals.email')}:
             <Input
               id={'Email'}
               type={'email'}
-              placeholder={'Email'}
+              placeholder={t('auth_modals.email')}
               obj={register('email', {
                 required: true,
                 pattern: /^\S+@\S+$/i
@@ -98,12 +99,12 @@ export const SignUpModal: FC<ISignUpModal> = ({ setState, setOtherState }) => {
           </label>
 
           <label htmlFor='Password' className={styles.label}>
-            Password:
+            {t('auth_modals.password')}:
             <div className={styles.password}>
               <Input
                 id={'Password'}
                 type={viewPass}
-                placeholder={'Password'}
+                placeholder={t('auth_modals.password')}
                 obj={register('password', {
                   required: true,
                   minLength: 5,
@@ -117,12 +118,13 @@ export const SignUpModal: FC<ISignUpModal> = ({ setState, setOtherState }) => {
             </div>
           </label>
           <div className={styles.controls}>
-            <Input type={'submit'} mt={'10px'} value={'Sing UP'} disabled={!isValid} />
-            <Input type={'reset'} value={'Reset'} mt={'10px'} />
+            <Input type={'submit'} mt={'10px'} value={t('auth_modals.sign_up')} disabled={!isValid} />
+            <Input type={'reset'} value={t('auth_modals.reset')} mt={'10px'} />
           </div>
         </form>
         <Typeography color={'white'} fontWeight={600} fontSize={'14px'} m={'10px 0 0 0'}>
-          Already have an account? <Button style={styles.btn} text={'Sign in'} onClick={changeModal}></Button>{' '}
+          {t('auth_modals.already_have_account')}{' '}
+          <Button style={styles.btn} text={t('auth_modals.sign_in')} onClick={changeModal}></Button>{' '}
         </Typeography>
       </Container>
     </>

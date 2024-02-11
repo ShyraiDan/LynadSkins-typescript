@@ -255,6 +255,19 @@ i18n
             us: 'English',
             ua: 'Ukrainian'
           },
+          auth_modals: {
+            sign_in_to_account: 'Sign in to your account',
+            sign_up_to_account: 'Sign up to your account',
+            email: 'Email',
+            password: 'Password',
+            sign_in: 'Sign in',
+            reset: 'Reset',
+            new_user: 'New to LynadSkins?',
+            already_have_account: 'Already have an account?',
+            create_account: 'Create an account.',
+            full_name: 'Full name',
+            sign_up: 'Sign up'
+          },
           currency: 'Currency',
           language: 'Language',
           personal_area: 'Personal area',
@@ -387,7 +400,6 @@ i18n
           our_advantages: 'Наші переваги',
           not_authorized: 'Ви не авторизовані',
           authorize: 'Увійти',
-
           prime_page: {
             title: 'Все необхідне для прибуткової торгівлі',
             subtitle: 'Включає найновіші торгові інструменти та функції',
@@ -521,6 +533,19 @@ i18n
           language_modal: {
             us: 'Англійська',
             ua: 'Українська'
+          },
+          auth_modals: {
+            sign_in_to_account: 'Увійдіть у свій обліковий запис',
+            sign_up_to_account: 'Зареєструйте свій обліковий запис',
+            email: 'Електронна адреса',
+            password: 'Пароль',
+            sign_in: 'Увійти',
+            reset: 'Очистити',
+            new_user: 'Вперше на LynadSkins?',
+            already_have_account: 'Вже маєте аккаунт?',
+            create_account: 'Створіть акаунт.',
+            full_name: "Повне ім'я",
+            sign_up: 'Зареєструватися'
           },
           currency: 'Валюта',
           language: 'Мова',
