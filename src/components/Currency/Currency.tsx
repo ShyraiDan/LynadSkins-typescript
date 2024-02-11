@@ -46,10 +46,14 @@ export const Currency: FC = () => {
           >
             <List>
               <ListItem onClick={() => changeCurrency('usd')} style={styles.item}>
-                USD
+                <Typeography color='white' hover={true}>
+                  USD
+                </Typeography>
               </ListItem>
               <ListItem onClick={() => changeCurrency('uah')} style={styles.item}>
-                UAH
+                <Typeography color='white' hover={true}>
+                  UAH
+                </Typeography>
               </ListItem>
             </List>
           </motion.div>
