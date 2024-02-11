@@ -3,8 +3,8 @@ import { forwardRef, FC, LegacyRef } from 'react'
 import { Link } from 'react-router-dom'
 import { TPost } from '../../redux/types'
 import styles from './BlogItem.module.css'
+import defaultImage from './../../i/counter-strike-2.webp'
 
-import { Container } from '../../ui/Container'
 import { List } from '../../ui/List'
 import { ListItem } from '../../ui/ListItem'
 import { Typeography } from '../../ui/Typeography'
@@ -19,11 +19,13 @@ interface IBlogItem {
 export const BlogItem: FC<IBlogItem> = forwardRef(({ top, data }, ref: LegacyRef<HTMLDivElement>) => {
   return (
     <div ref={ref} className={`${styles.container} ${top && styles.top}`}>
-      {/* <Container ref={ref} styles={`${styles.container} ${top && styles.top}`}> */}
       <div className={styles.column}>
-        <img src={`${process.env.REACT_APP_API_URL}${data.imageUrl}`} className={styles.photo} alt='' />
+        <img
+          src={`${'http://localhost:5555' || process.env.REACT_APP_API_URL}${data.imageUrl}`}
+          className={styles.photo}
+          alt=''
+        />
       </div>
-
       <div className={styles.column}>
         <div className={styles.hashtags}>
           <List display={'flex'} mt={'5px'}>
@@ -50,7 +52,6 @@ export const BlogItem: FC<IBlogItem> = forwardRef(({ top, data }, ref: LegacyRef
           </h2>
         </div>
       </div>
-      {/* </Container> */}
     </div>
   )
 })

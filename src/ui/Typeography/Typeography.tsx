@@ -17,6 +17,7 @@ interface ITypography {
   hover?: boolean
   icon?: boolean
   fontWeight?: number
+  maxWidth?: string
 }
 
 const variantsMapping: any = {
@@ -34,7 +35,10 @@ const variantsMapping: any = {
 }
 
 export const Typeography: FC<ITypography> = forwardRef(
-  ({ variant, color, children, before, after, p, mt, mb, m, textAlign, fontSize, hover, icon, fontWeight }, ref) => {
+  (
+    { variant, color, children, before, after, p, mt, mb, m, textAlign, fontSize, hover, icon, fontWeight, maxWidth },
+    ref
+  ) => {
     const Component = variant ? variantsMapping[variant] : 'p'
     let cl = ''
     if (variant) {
@@ -66,7 +70,8 @@ export const Typeography: FC<ITypography> = forwardRef(
           margin: m,
           fontSize,
           textAlign,
-          fontWeight
+          fontWeight,
+          maxWidth
         }}
       >
         {children}

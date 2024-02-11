@@ -35,7 +35,7 @@ export const Search: FC = () => {
                 return search.toLowerCase() === '' ? item : item.skinName.toLowerCase().includes(search.toLowerCase())
               })
               .map((item: TSkin) => {
-                return <SmallItem data={item} />
+                return <SmallItem key={item._id} data={item} />
               })}
         </div>
       </div>

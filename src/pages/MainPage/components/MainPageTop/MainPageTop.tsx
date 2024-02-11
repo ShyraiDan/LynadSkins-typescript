@@ -95,7 +95,14 @@ export const MainPageTop: FC = () => {
           </div>
         </motion.div>
         <motion.div className={styles.subtitle} initial='hidden' whileInView='visible' viewport={{ once: true }}>
-          <MTypeography color={'grey'} custom={2} variants={textAnimation} variant={'h2'} fontSize={'16px'}>
+          <MTypeography
+            color={'grey'}
+            custom={2}
+            variants={textAnimation}
+            variant={'h2'}
+            fontSize={'16px'}
+            maxWidth='850px'
+          >
             {t('footer_advantages')}
           </MTypeography>
         </motion.div>
