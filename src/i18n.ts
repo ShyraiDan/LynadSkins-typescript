@@ -248,7 +248,8 @@ i18n
             save: 'Save',
             publish: 'Publish',
             cancel: 'Cancel',
-            delete: 'Delete'
+            delete: 'Delete',
+            not_found: 'No Blogs Found'
           },
           currency: 'Currency',
           language: 'Language',
@@ -510,7 +511,8 @@ i18n
             save: 'Зберегти',
             publish: 'Публікувати',
             cancel: 'Скасувати',
-            delete: 'Видалити'
+            delete: 'Видалити',
+            not_found: 'Блоги не знайдені'
           },
           currency: 'Валюта',
           language: 'Мова',

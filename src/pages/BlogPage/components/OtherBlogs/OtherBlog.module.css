@@ -3,6 +3,13 @@
   min-height: 85vh;
 }
 
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     margin-top: 25px;
