@@ -107,7 +107,7 @@ export const Header: FC<IHeader> = ({ theme, setTheme, langFunc }) => {
       </nav>
 
       <div className={styles.burger}>
-        <Burger langFunc={langFunc} />
+        <Burger langFunc={langFunc} openSignUpModal={openSignUpModal} openSignInModal={handleClick} />
       </div>
       <div className={styles.left}>
         <div className={styles.btns}>
@@ -124,7 +124,7 @@ export const Header: FC<IHeader> = ({ theme, setTheme, langFunc }) => {
           </>
         )}
         {!isAuth && (
-          <>
+          <div className={styles['auth-btns']}>
             <Button
               text={t('header.sign_up')}
               style={styles.btn}
@@ -137,7 +137,7 @@ export const Header: FC<IHeader> = ({ theme, setTheme, langFunc }) => {
               hover={true}
               onClick={() => handleClick()}
             ></Button>
-          </>
+          </div>
         )}
         <AnimatePresence initial={false}>
           {(singInOpen.state || open) && (

@@ -17,7 +17,6 @@ export const AddPostPage: FC = () => {
   const [isLoading, setLoading] = useState(false)
   const [text, setText] = useState('')
   const [title, setTitle] = useState('')
-  // сменили масив на строку
   const [tags, setTags] = useState<string>('')
   const [imageUrl, setImageUrl] = useState('')
   const inputFileRef = useRef<HTMLInputElement>(null)
@@ -90,7 +89,7 @@ export const AddPostPage: FC = () => {
               className={styles.image}
               // process.env.REACT_APP_API_URL
               //src={`${process.env.REACT_APP_API_URL}${imageUrl}`}
-              src={`http://localhost:4444${imageUrl}`}
+              src={`http://localhost:5555${imageUrl}`}
               alt='Uploaded'
             />
           )}

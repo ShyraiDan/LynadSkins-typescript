@@ -1,6 +1,5 @@
 .wrapper {
   display: flex;
-  margin-right: 10px;
 }
 .dark_mode_label {
   width: 65px;
@@ -64,4 +63,10 @@
 }
 .dark_mode_input:checked + .dark_mode_label .moon {
   fill: black;
+}
+
+@media screen and (min-width: 576px) {
+  .wrapper {
+    margin-right: 10px;
+  }
 }

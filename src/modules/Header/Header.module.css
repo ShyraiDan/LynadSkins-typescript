@@ -27,6 +27,17 @@
 .hide {
   display: none;
 }
+
+.auth-btns {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  .auth-btns {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 1050px) {
   .hide {
     display: block;

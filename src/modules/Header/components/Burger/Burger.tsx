@@ -18,9 +18,11 @@ import { FaInstagram, FaSteam, FaTelegram, FaTwitter } from 'react-icons/fa'
 
 interface TBurger {
   langFunc: i18n
+  openSignUpModal: () => void
+  openSignInModal: () => void
 }
 
-export const Burger: FC<TBurger> = ({ langFunc }) => {
+export const Burger: FC<TBurger> = ({ langFunc, openSignUpModal, openSignInModal }) => {
   const [open, setOpen] = useState(false)
   const burger = useRef<HTMLDivElement>(null)
   const burgerBtn = useRef<HTMLDivElement>(null)
@@ -93,14 +95,14 @@ export const Burger: FC<TBurger> = ({ langFunc }) => {
                 <ListItem style={styles.item}>
                   <Link onClick={() => burgerClick()} to={'/trade'}>
                     <Typeography color={'white-strong'} fontSize={'20px'}>
-                      Trade
+                      {t('header.trade')}
                     </Typeography>
                   </Link>
                 </ListItem>
                 <ListItem style={styles.item}>
                   <Link onClick={() => burgerClick()} to={'/market'}>
                     <Typeography color={'white-strong'} fontSize={'20px'}>
-                      Market
+                      {t('header.market')}
                     </Typeography>
                   </Link>
                 </ListItem>
@@ -108,7 +110,7 @@ export const Burger: FC<TBurger> = ({ langFunc }) => {
                   <ListItem style={styles.item}>
                     <Link onClick={() => burgerClick()} to={'/profile'}>
                       <Typeography color={'white-strong'} fontSize={'20px'}>
-                        Profile
+                        {t('personalPage.profile')}
                       </Typeography>
                     </Link>
                   </ListItem>
@@ -117,12 +119,30 @@ export const Burger: FC<TBurger> = ({ langFunc }) => {
                 <ListItem style={styles.item}>
                   <Link onClick={() => burgerClick()} to={'/blog'}>
                     <Typeography color={'white-strong'} fontSize={'20px'}>
-                      Blog
+                      {t('header.blog')}
                     </Typeography>
                   </Link>
                 </ListItem>
               </List>
             </nav>
+          </div>
+          <div>
+            {!isAuth && (
+              <div className={styles['auth-btns']}>
+                <Button
+                  text={t('header.sign_up')}
+                  style={styles['btn-unset']}
+                  hover={true}
+                  onClick={() => openSignUpModal()}
+                ></Button>
+                <Button
+                  text={t('header.sign_in')}
+                  style={styles['btn-unset']}
+                  hover={true}
+                  onClick={() => openSignInModal()}
+                ></Button>
+              </div>
+            )}
           </div>
           <Typeography m={'15px 0 0 0'} variant={'h3'} fontSize={'20px'} color={'white-strong'}>
             {t('settings')}
