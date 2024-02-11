@@ -50,7 +50,6 @@ export const Item: FC<IItem> = ({ data }) => {
 
   const handleChange = (data: TSkin) => {
     dispatch(addChange(data))
-    // Было закомичено до интеграции тс
     // setStatus(!status)
   }
 
@@ -63,9 +62,6 @@ export const Item: FC<IItem> = ({ data }) => {
     <>
       <div className={styles.item} onClick={(e) => handleClick(e)}>
         <img src={data?.imageUrl} alt={`${data?.itemName}-${data?.skinName}`} className={styles.photo} loading='lazy' />
-        {/* ${
-						page && styles.description_bottom
-					} */}
         <div className={`${styles.description} `}>
           <Typeography variant={'h3'} fontSize={'16px'} color={'grey'}>
             <Typeography variant={'span'} color={'gold'} fontSize={'16px'}>{`${
@@ -102,7 +98,6 @@ export const Item: FC<IItem> = ({ data }) => {
               <ItemModal
                 data={data}
                 addToCart={addToCart}
-                // сделал строгое приведение типов
                 page={Boolean(page)}
                 handleTrade={handleTrade}
                 status={status}

@@ -35,6 +35,55 @@ export const ItemModal: FC<IItemModal> = ({ data, addToCart, page, handleTrade, 
   const indexCart = cart.findIndex((item) => data._id === item._id)
   const indexWish = wishList.findIndex((item) => data._id === item._id)
 
+  const localizeItemExterior = (exterior: string) => {
+    let translatedExterior = ''
+
+    switch (exterior) {
+      case 'Factory New':
+        translatedExterior = t('factory_new')
+        break
+      case 'Minimal Wear':
+        translatedExterior = t('minimal_wear')
+        break
+      case 'Field-Tested':
+        translatedExterior = t('field_tested')
+        break
+      case 'Well-Worn':
+        translatedExterior = t('well_worn')
+        break
+      case 'Battle-Scarred':
+        translatedExterior = t('battle_scarred')
+        break
+    }
+    return translatedExterior
+  }
+
+  const localizeItemRarity = (rarity: string) => {
+    let translatedRarity = ''
+
+    switch (rarity) {
+      case 'Consumer Grade':
+        translatedRarity = t('consumer_grade')
+        break
+      case 'Industrial Grade':
+        translatedRarity = t('industrial_grade')
+        break
+      case 'Mil-Spec Grade':
+        translatedRarity = t('milSpec_grade')
+        break
+      case 'Restricted':
+        translatedRarity = t('restricted')
+        break
+      case 'Classified':
+        translatedRarity = t('classified')
+        break
+      case 'Covert':
+        translatedRarity = t('covert')
+        break
+    }
+    return translatedRarity
+  }
+
   return (
     <Container styles={styles.container}>
       <div className={styles['modal-container']}>
@@ -54,7 +103,7 @@ export const ItemModal: FC<IItemModal> = ({ data, addToCart, page, handleTrade, 
           {data?.itemName}
         </Typeography>
         <Typeography variant={'h3'} color={'white'} fontSize={'16px'}>
-          {data?.skinName} ({data?.exterior})
+          {data?.skinName} ({localizeItemExterior(data?.exterior)})
         </Typeography>
         <div className={styles['modal-info']}>
           <div className={styles['modal-line']}>
@@ -77,7 +126,7 @@ export const ItemModal: FC<IItemModal> = ({ data, addToCart, page, handleTrade, 
           <List mt={'15px'}>
             <ListItem display={'flex'} justifyContent={'space-between'} m={'10px 0 0 0'}>
               <Typeography variant={'span'} color={'white'}>
-                Float
+                {t('float')}
               </Typeography>
               <Typeography variant={'span'} color={'white'}>
                 {data?.float}
@@ -85,16 +134,16 @@ export const ItemModal: FC<IItemModal> = ({ data, addToCart, page, handleTrade, 
             </ListItem>
             <ListItem display={'flex'} justifyContent={'space-between'} m={'10px 0 0 0'}>
               <Typeography variant={'span'} color={'white'}>
-                Rarity
+                {t('rarity')}
               </Typeography>
               <Typeography variant={'span'} color={'white'}>
-                {data?.rarity}
+                {localizeItemRarity(data?.rarity)}
               </Typeography>
             </ListItem>
           </List>
         </div>
         <div className={styles['modal-price']}>
-          <Typeography color={'white'}>Price</Typeography>
+          <Typeography color={'white'}>{t('price')}</Typeography>
           <Typeography color={'white'}>
             {' '}
             {currency.currency === 'usd' ? `$ ${data?.price.toFixed(2)}` : `₴ ${(data?.price * 36.7).toFixed(2)}`}
