@@ -19,20 +19,6 @@ interface ITypography {
   fontWeight?: number
 }
 
-// type TVariantsMapping = {
-// 	h1: string
-// 	h2: string
-// 	h3: string
-// 	h4: string
-// 	h5: string
-// 	h6: string
-// 	subheading1: string
-// 	subheading2: string
-// 	body1: string
-// 	body2: string
-// 	span: string
-// }
-
 const variantsMapping: any = {
   h1: 'h1',
   h2: 'h2',
@@ -90,20 +76,3 @@ export const Typeography: FC<ITypography> = forwardRef(
 )
 
 export const MTypeography = motion(Typeography)
-
-{
-  /* <Component
-ref={ref}
-className={cl}
-style={{
-	padding: p,
-	marginTop: mt,
-	marginBottom: mb,
-	margin: m,
-	fontSize,
-	textAlign,
-	fontWeight,
-}}>
-{children}
-</Component> */
-}

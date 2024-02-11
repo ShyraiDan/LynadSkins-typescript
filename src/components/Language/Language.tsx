@@ -43,11 +43,15 @@ export const Language: FC<ILanguage> = ({ langFunc }) => {
             <List>
               <ListItem onClick={() => langFunc.changeLanguage('en')} style={styles.item}>
                 <img src={usa} alt='' className={styles.img} />
-                English
+                <Typeography color='white' hover={true}>
+                  {t('language_modal.us')}
+                </Typeography>
               </ListItem>
               <ListItem onClick={() => langFunc.changeLanguage('ua')} style={styles.item}>
                 <img src={ua} alt='' className={styles.img} />
-                Ukrainian
+                <Typeography color='white' hover={true}>
+                  {t('language_modal.ua')}
+                </Typeography>
               </ListItem>
             </List>
           </motion.div>

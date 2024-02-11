@@ -251,6 +251,10 @@ i18n
             delete: 'Delete',
             not_found: 'No Blogs Found'
           },
+          language_modal: {
+            us: 'English',
+            ua: 'Ukrainian'
+          },
           currency: 'Currency',
           language: 'Language',
           personal_area: 'Personal area',
@@ -513,6 +517,10 @@ i18n
             cancel: 'Скасувати',
             delete: 'Видалити',
             not_found: 'Блоги не знайдені'
+          },
+          language_modal: {
+            us: 'Англійська',
+            ua: 'Українська'
           },
           currency: 'Валюта',
           language: 'Мова',
