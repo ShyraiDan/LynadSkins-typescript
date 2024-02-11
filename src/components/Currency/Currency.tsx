@@ -24,8 +24,10 @@ export const Currency: FC = () => {
   const changeCurrency = (val: string): void => {
     if (currency.currency !== val) {
       dispatch(setCurrency(val))
+      setCurrencyOpen((state) => !state)
     }
   }
+
   return (
     <div className={styles['curr-cont']}>
       <div className={styles.text} onClick={() => openModal(currencyOpen, setCurrencyOpen)}>
@@ -45,13 +47,19 @@ export const Currency: FC = () => {
             exit={{ opacity: 0 }}
           >
             <List>
-              <ListItem onClick={() => changeCurrency('usd')} style={styles.item}>
-                <Typeography color='white' hover={true}>
+              <ListItem
+                onClick={() => changeCurrency('usd')}
+                style={`${styles.item} ${currency.currency === 'usd' && styles.selected}`}
+              >
+                <Typeography color={currency.currency === 'usd' ? 'grey' : 'white'} hover={currency.currency !== 'usd'}>
                   USD
                 </Typeography>
               </ListItem>
-              <ListItem onClick={() => changeCurrency('uah')} style={styles.item}>
-                <Typeography color='white' hover={true}>
+              <ListItem
+                onClick={() => changeCurrency('uah')}
+                style={`${styles.item} ${currency.currency === 'uah' && styles.selected}`}
+              >
+                <Typeography color={currency.currency === 'uah' ? 'grey' : 'white'} hover={currency.currency !== 'uah'}>
                   UAH
                 </Typeography>
               </ListItem>

@@ -22,6 +22,14 @@ export const Language: FC<ILanguage> = ({ langFunc }) => {
   const openModal = (val: boolean, setVal: Dispatch<SetStateAction<boolean>>): void => {
     setVal(!val)
   }
+
+  const changeLanguage = (val: string): void => {
+    if (langFunc.language !== val) {
+      langFunc.changeLanguage(val)
+      setlanguageOpen((state) => !state)
+    }
+  }
+
   return (
     <div className={styles['lang-cont']}>
       <div onClick={() => openModal(languageOpen, setlanguageOpen)}>
@@ -41,15 +49,21 @@ export const Language: FC<ILanguage> = ({ langFunc }) => {
             className={styles.language}
           >
             <List>
-              <ListItem onClick={() => langFunc.changeLanguage('en')} style={styles.item}>
+              <ListItem
+                onClick={() => changeLanguage('en')}
+                style={`${styles.item} ${langFunc.language === 'en' && styles.selected}`}
+              >
                 <img src={usa} alt='' className={styles.img} />
-                <Typeography color='white' hover={true}>
+                <Typeography color={langFunc.language === 'en' ? 'grey' : 'white'} hover={langFunc.language !== 'en'}>
                   {t('language_modal.us')}
                 </Typeography>
               </ListItem>
-              <ListItem onClick={() => langFunc.changeLanguage('ua')} style={styles.item}>
+              <ListItem
+                onClick={() => changeLanguage('ua')}
+                style={`${styles.item} ${langFunc.language === 'ua' && styles.selected}`}
+              >
                 <img src={ua} alt='' className={styles.img} />
-                <Typeography color='white' hover={true}>
+                <Typeography color={langFunc.language === 'ua' ? 'grey' : 'white'} hover={langFunc.language !== 'ua'}>
                   {t('language_modal.ua')}
                 </Typeography>
               </ListItem>

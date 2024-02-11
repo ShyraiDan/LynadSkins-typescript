@@ -8,21 +8,29 @@
   width: 95px;
   border-radius: 5px;
 }
+
 .curr-cont {
   user-select: none;
   position: relative;
   z-index: 1;
 }
+
 .item {
   margin-bottom: 5px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.2s;
 }
+
 .text {
   display: flex;
   align-items: center;
 }
+
+.selected {
+  cursor: default;
+}
+
 .icon {
   display: flex;
   align-items: center;
@@ -32,13 +40,16 @@
   width: 25px;
   margin-left: 5px;
 }
+
 .icon-opened {
   rotate: 180deg;
 }
+
 @media screen and (min-width: 1050px) {
   .item:hover {
     color: #e71fb8;
   }
+
   .curr-cont {
     margin: 0 10px;
   }
