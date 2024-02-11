@@ -20,7 +20,7 @@
   position: relative;
   top: 0;
   left: 0;
-  background-color: #454171;
+  background-color: var(--modals);
   z-index: 1;
   max-height: calc(100vh - 110px);
 }
