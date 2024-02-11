@@ -128,8 +128,8 @@ export const Footer: FC = () => {
       </Container>
       <Typeography color={'white'} mb={'10px'}>
         {t('copyright')} © {d}{' '}
-        <Link to='https://github.com/ShirayDan' className={styles['footer-link']}>
-          @LynadPro
+        <Link to='https://github.com/ShyraiDan' className={styles['footer-link']}>
+          @ShyraiDan
         </Link>
       </Typeography>
     </footer>
