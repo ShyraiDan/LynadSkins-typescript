@@ -2,6 +2,7 @@ import { useState, useRef, ChangeEvent, FC } from 'react'
 import styles from './Search.module.css'
 import { useAppSelector } from '../../../../redux/hook'
 import { TSkin } from '../../../../redux/types'
+import { useTranslation } from 'react-i18next'
 
 import { Container } from '../../../../ui/Container'
 import { Input } from '../../../../ui/Input'
@@ -11,6 +12,7 @@ export const Search: FC = () => {
   const [search, setSearch] = useState('')
   const skins = useAppSelector((store) => store.skins.items)
   const skinsShow = useRef<HTMLDivElement>(null)
+  const { t } = useTranslation()
 
   const handleSearch = (e: ChangeEvent<HTMLInputElement> | undefined) => {
     if (e !== undefined && skinsShow.current) {
@@ -24,7 +26,7 @@ export const Search: FC = () => {
     <Container styles={styles.container}>
       <div className={styles.top}>
         <form className={styles.form}>
-          <Input width={'100%'} placeholder={'Search...'} onChange={(e) => handleSearch(e)} />
+          <Input width={'100%'} placeholder={`${t('search')}...`} onChange={(e) => handleSearch(e)} />
         </form>
       </div>
       <div className={styles['skins-container']}>

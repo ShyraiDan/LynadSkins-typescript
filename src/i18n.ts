@@ -70,6 +70,7 @@ i18n
           advantage_four: 'Online support, response time less than 5 minutes',
           popular_items: 'Popular CS items',
           show_items: 'Show all items',
+          search: 'Search',
           header: {
             sign_in: 'Sign in',
             sign_up: 'Sign up',
@@ -350,6 +351,7 @@ i18n
           advantage_four: 'Онлайн підтримка, час відповіді менше ніж 5 секунд',
           popular_items: 'Популярні CS предмети',
           show_items: 'Показати всі предмети',
+          search: 'Пошук',
           header: {
             sign_in: 'Увійти',
             sign_up: 'Зареєструватись',
