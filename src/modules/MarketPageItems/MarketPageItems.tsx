@@ -40,7 +40,9 @@ export const MarketPageItems: FC = () => {
           })}
         </div>
       ) : (
-        <Typeography variant='h2'>{t('no_skins')}</Typeography>
+        <Typeography variant='h2' color={'white'}>
+          {t('no_skins')}
+        </Typeography>
       )}
     </div>
   )
