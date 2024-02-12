@@ -8,6 +8,7 @@ import { selectIsAuth } from '../../redux/slices/auth'
 import { setSignInState } from '../../redux/slices/signInModal'
 import { i18n } from 'i18next'
 import { useTranslation } from 'react-i18next'
+import { fetchAuthMe } from '../../redux/slices/auth'
 import styles from './Header.module.css'
 
 import { Currency } from '../../components/Currency'
@@ -37,7 +38,7 @@ export const Header: FC<IHeader> = ({ theme, setTheme, langFunc }) => {
   const [open, setOpen] = useState<boolean>(singInOpen.state || false)
   const [signUpOpen, setSignUpOpen] = useState<boolean>(false)
   const [data, setData] = useState(null)
-  const isAuth = useAppSelector(selectIsAuth)
+  let isAuth = useAppSelector(selectIsAuth)
 
   const handleClick = () => {
     if (singInOpen.state) {
@@ -56,20 +57,15 @@ export const Header: FC<IHeader> = ({ theme, setTheme, langFunc }) => {
   }
 
   useEffect(() => {
-    if (isAuth) {
+    const fetchData = async () => {
       const token = window.localStorage.getItem('token')
-
-      axios
-        .get('/auth/me', {
-          data: {
-            token
-          }
-        })
-        .then((res) => {
-          setData(res.data)
-        })
+      if (token) {
+        const data = await dispatch(fetchAuthMe(token))
+        setData(data.payload)
+      }
     }
-  }, [isAuth])
+    fetchData()
+  }, [isAuth, localStorage.getItem('token')])
 
   return (
     <div className={styles.header}>
