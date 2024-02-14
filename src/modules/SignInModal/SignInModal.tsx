@@ -32,7 +32,7 @@ export const SignInModal: FC<ISignInModal> = ({ setState, setOtherState }) => {
     handleSubmit,
     reset
   } = useForm<TfetchAuthparams>({
-    mode: 'onBlur'
+    mode: 'onSubmit'
   })
 
   const onSubmit: SubmitHandler<TfetchAuthparams> = async (values) => {
@@ -75,13 +75,16 @@ export const SignInModal: FC<ISignInModal> = ({ setState, setOtherState }) => {
               type={'email'}
               placeholder={t('auth_modals.email')}
               obj={register('email', {
-                required: true,
-                pattern: /^\S+@\S+$/i
+                required: { value: true, message: t('auth_modals.email_required') },
+                pattern: {
+                  value: /^\S+@\S+$/i,
+                  message: t('auth_modals.email_not_validated')
+                }
               })}
               mt={'5px'}
             />
           </label>
-
+          {errors.email && <p className={styles.error}>{errors.email.message}</p>}
           <label htmlFor='Password' className={styles.label}>
             {t('auth_modals.password')}:
             <div className={styles.password}>
@@ -90,9 +93,9 @@ export const SignInModal: FC<ISignInModal> = ({ setState, setOtherState }) => {
                 type={viewPass}
                 placeholder={t('auth_modals.password')}
                 obj={register('password', {
-                  required: true,
-                  minLength: 5,
-                  maxLength: 12
+                  required: { value: true, message: t('auth_modals.password_required') },
+                  minLength: { value: 5, message: t('auth_modals.password_short') },
+                  maxLength: { value: 12, message: t('auth_modals.password_long') }
                 })}
                 mt={'5px'}
               />
@@ -101,9 +104,9 @@ export const SignInModal: FC<ISignInModal> = ({ setState, setOtherState }) => {
               </span>
             </div>
           </label>
-
+          {errors.password && <p className={styles.error}>{errors.password.message}</p>}
           <div className={styles.controls}>
-            <Input type={'submit'} mt={'10px'} value={t('auth_modals.sign_in')} disabled={!isValid} />
+            <Input type={'submit'} mt={'10px'} value={t('auth_modals.sign_in')} />
             <Input type={'reset'} value={t('auth_modals.reset')} mt={'10px'} />
           </div>
         </form>

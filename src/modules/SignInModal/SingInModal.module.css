@@ -51,6 +51,10 @@
   padding: 0;
   color: var(--text-primary);
 }
+.error {
+  margin-bottom: 5px;
+  color: red;
+}
 .btn:hover {
   color: #e71fb8;
 }

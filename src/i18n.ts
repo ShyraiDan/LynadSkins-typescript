@@ -268,7 +268,14 @@ i18n
             already_have_account: 'Already have an account?',
             create_account: 'Create an account.',
             full_name: 'Full name',
-            sign_up: 'Sign up'
+            sign_up: 'Sign up',
+            email_required: 'Email is required',
+            email_not_validated: 'Please check that your e-mail address is indicated correctly',
+            password_required: 'Password is required',
+            password_short: 'Password must consist at least 5 symbols',
+            password_long: 'Password must be less than 12 characters long',
+            fullName_required: 'Full name is required field',
+            fullName_short: 'Full name must consist at least 3 symbols'
           },
           currency: 'Currency',
           language: 'Language',
@@ -549,7 +556,14 @@ i18n
             already_have_account: 'Вже маєте аккаунт?',
             create_account: 'Створіть акаунт.',
             full_name: "Повне ім'я",
-            sign_up: 'Зареєструватися'
+            sign_up: 'Зареєструватися',
+            email_required: "Електронна адреса обов'язкова",
+            email_not_validated: 'Перевірте коректність введеної електронної адреси',
+            password_required: "Пароль обов'язковий",
+            password_short: 'Пароль має містити хоча б 5 символів',
+            password_long: 'Пароль має містити не більше 12 символів',
+            fullName_required: "Ім'я обов'язкове",
+            fullName_short: "Ім'я має містити хоча б 3 символи"
           },
           currency: 'Валюта',
           language: 'Мова',

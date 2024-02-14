@@ -31,7 +31,7 @@ export const SignUpModal: FC<ISignUpModal> = ({ setState, setOtherState }) => {
     handleSubmit,
     reset
   } = useForm<TfetchRegisterparams>({
-    mode: 'onBlur'
+    mode: 'onSubmit'
   })
 
   const onSubmit: SubmitHandler<TfetchRegisterparams> = async (values) => {
@@ -64,11 +64,6 @@ export const SignUpModal: FC<ISignUpModal> = ({ setState, setOtherState }) => {
         <Typeography variant={'h3'} color={'white'} m={'0 0 15px 0 '}>
           {t('auth_modals.sign_up_to_account')}
         </Typeography>
-        <Typeography variant={'h4'} color={'orange'} m={'0 0 15px 0 '}>
-          <FaExclamationTriangle fill='#e5864e' fontSize={'14px'} />
-          Your full name must include at least 3 symbols, email address must be valid and password must include minimum
-          5 symbols
-        </Typeography>
         <form action='' onSubmit={handleSubmit(onSubmit)} className={styles.form}>
           <label htmlFor='fullName' className={styles.label}>
             {t('auth_modals.full_name')}:
@@ -77,13 +72,13 @@ export const SignUpModal: FC<ISignUpModal> = ({ setState, setOtherState }) => {
               type={'text'}
               placeholder={t('auth_modals.full_name')}
               obj={register('fullName', {
-                required: 'Full name is required field',
-                minLength: 3
+                required: { value: true, message: t('auth_modals.fullName_required') },
+                minLength: { value: 3, message: t('auth_modals.fullName_short') }
               })}
               mt={'5px'}
             />
           </label>
-
+          {errors.fullName && <p className={styles.error}>{errors.fullName.message}</p>}
           <label htmlFor='Email' className={styles.label}>
             {t('auth_modals.email')}:
             <Input
@@ -91,13 +86,16 @@ export const SignUpModal: FC<ISignUpModal> = ({ setState, setOtherState }) => {
               type={'email'}
               placeholder={t('auth_modals.email')}
               obj={register('email', {
-                required: true,
-                pattern: /^\S+@\S+$/i
+                required: { value: true, message: t('auth_modals.email_required') },
+                pattern: {
+                  value: /^\S+@\S+$/i,
+                  message: t('auth_modals.email_not_validated')
+                }
               })}
               mt={'5px'}
             />
           </label>
-
+          {errors.email && <p className={styles.error}>{errors.email.message}</p>}
           <label htmlFor='Password' className={styles.label}>
             {t('auth_modals.password')}:
             <div className={styles.password}>
@@ -106,9 +104,9 @@ export const SignUpModal: FC<ISignUpModal> = ({ setState, setOtherState }) => {
                 type={viewPass}
                 placeholder={t('auth_modals.password')}
                 obj={register('password', {
-                  required: true,
-                  minLength: 5,
-                  maxLength: 12
+                  required: { value: true, message: t('auth_modals.password_required') },
+                  minLength: { value: 5, message: t('auth_modals.password_short') },
+                  maxLength: { value: 12, message: t('auth_modals.password_long') }
                 })}
                 mt={'5px'}
               />
@@ -117,8 +115,9 @@ export const SignUpModal: FC<ISignUpModal> = ({ setState, setOtherState }) => {
               </span>
             </div>
           </label>
+          {errors.password && <p className={styles.error}>{errors.password.message}</p>}
           <div className={styles.controls}>
-            <Input type={'submit'} mt={'10px'} value={t('auth_modals.sign_up')} disabled={!isValid} />
+            <Input type={'submit'} mt={'10px'} value={t('auth_modals.sign_up')} />
             <Input type={'reset'} value={t('auth_modals.reset')} mt={'10px'} />
           </div>
         </form>
