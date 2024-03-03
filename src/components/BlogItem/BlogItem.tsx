@@ -20,11 +20,7 @@ export const BlogItem: FC<IBlogItem> = forwardRef(({ top, data }, ref: LegacyRef
   return (
     <div ref={ref} className={`${styles.container} ${top && styles.top}`}>
       <div className={styles.column}>
-        <img
-          src={`${'http://localhost:5555' || process.env.REACT_APP_API_URL}${data.imageUrl}`}
-          className={styles.photo}
-          alt=''
-        />
+        <img src={`https://lynadskins-backend.onrender.com${data.imageUrl}`} className={styles.photo} alt='' />
       </div>
       <div className={styles.column}>
         <div className={styles.hashtags}>

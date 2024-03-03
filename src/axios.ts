@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 const instance = axios.create({
-  baseURL: 'http://localhost:5555/'
-  // baseURL: process.env.REACT_APP_API_URL
+  // baseURL: 'http://localhost:5555/'
+  baseURL: 'https://lynadskins-backend.onrender.com/'
 })
 
 instance.interceptors.request.use((config) => {

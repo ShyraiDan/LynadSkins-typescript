@@ -85,13 +85,7 @@ export const AddPostPage: FC = () => {
       <div className={styles['image-container']}>
         <div>
           {imageUrl && (
-            <img
-              className={styles.image}
-              // process.env.REACT_APP_API_URL
-              //src={`${process.env.REACT_APP_API_URL}${imageUrl}`}
-              src={`http://localhost:5555${imageUrl}`}
-              alt='Uploaded'
-            />
+            <img className={styles.image} src={`https://lynadskins-backend.onrender.com${imageUrl}`} alt='Uploaded' />
           )}
         </div>
         <div className={styles.btns}>
